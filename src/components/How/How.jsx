@@ -3,7 +3,9 @@ export const How = () => {
     <section className="how" id="contacts">
       <div className="container">
         <div className="how__row">
-          <h2 className="how__row-title">Как мы работаем? <br/> Всего 3 шага</h2>
+          <h2 className="how__row-title">Как мы работаем? 
+            {/* <br/> Всего 3 шага */}
+          </h2>
           <ul className="how__row-items">
             <li className="how__row-item">                
               <div className="how__row-item_title"><span><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none"> <path d="M25 11.7802V25H12.5064C10.0654 24.9988 7.67812 24.2844 5.6385 22.9448C3.59887 21.6051 1.99602 19.6987 1.02737 17.4604C0.0587217 15.222 -0.23342 12.7495 0.18693 10.3474C0.60728 7.9453 1.72176 5.71846 3.3931 3.94119C5.06444 2.16392 7.21965 0.913846 9.59326 0.344936C11.9669 -0.223974 14.4552 -0.0868704 16.7518 0.73936C19.0484 1.56559 21.0529 3.04486 22.5185 4.99497C23.984 6.94507 24.8466 9.28085 25 11.7146V11.7802ZM13.5303 7.29167H7.27416V9.375H13.5303V7.29167ZM17.7011 11.4583H7.27416V13.5417H17.7011V11.4583ZM17.7011 15.625H7.27416V17.7083H17.7011V15.625Z" fill="#d78707"></path> </svg> </span> Обсудим 
