@@ -1,0 +1,30 @@
+.send {
+    padding: 20px 0;
+    &__row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px;
+
+
+        &-appeal {
+            width: 550px;
+            font-size: 26px;
+        }        
+    }
+    &__row--promo {
+        background-color: rgba(0, 0, 0, .5);
+        border: rgba(0, 0, 0, 0);
+        border-radius: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px;    
+        color: white; 
+
+        // margin-top: 15%;
+        svg {
+            display: none;
+        }   
+    }
+}
