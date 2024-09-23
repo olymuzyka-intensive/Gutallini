@@ -107,7 +107,7 @@ export const Services = () => {
                         : "services__chapter-item"
                     } 
                   >
-                    <p className="services__row-type">{selectedObject.service}</p>
+                    <p className="services__row-type--preview">{selectedObject.service}</p>
                     <div className="services__row-promo"> {selectedObject.promo} </div>
 
                     <div className="services__row-photo">
