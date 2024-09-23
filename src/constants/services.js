@@ -138,8 +138,8 @@ promo: "Царапины, порезы, трещины - приводят к п�
   },
   {
     id: 5,
-    imgBefore: "/img/services/6-before.jpg",
-    imgAfter: "/img/services/6-after.jpg",
+    imgBefore: "/img/services/5-before.jpg",
+    imgAfter: "/img/services/5-after.jpg",
     service: "Патинирование",
     price: "95",
     tern: "10",

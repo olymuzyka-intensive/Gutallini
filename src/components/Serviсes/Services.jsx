@@ -114,12 +114,12 @@ export const Services = () => {
                       <img
                         src={selectedObject.imgBefore}
                         alt="photo"
-                        className="services__row-img"
+                        className="services__row-img--preview"
                       />
                       <img
                         src={selectedObject.imgAfter}
                         alt="photo"
-                        className="services__row-img"
+                        className="services__row-img--preview"
                       />
                     </div>
 

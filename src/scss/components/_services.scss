@@ -18,6 +18,9 @@
         &-img {
             width: 100%;
             border-radius: 10px;
+            &--preview {
+                width: 50%;
+            }
         }
 
         &-item {
@@ -105,6 +108,9 @@
             display: flex;
             flex-direction: column;     
           }
-    
+        &-content {
+            display: flex;
+            flex-grow: 1;
+        }
     }
 } 
