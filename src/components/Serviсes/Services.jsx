@@ -107,8 +107,17 @@ export const Services = () => {
                         : "services__chapter-item"
                     } 
                   >
-                    <p className="services__row-type--preview">{selectedObject.service}</p>
-                    <div className="services__row-promo"> {selectedObject.promo} </div>
+                    <p className="services__row-type--modal">{selectedObject.service}</p>
+                    
+                    <div className="services__row-info">
+                      <p className="services__row-type--tern">
+                        срок выполнения
+                        <span> {selectedObject.tern}</span> дней
+                      </p>
+                      <p className="services__row-type--price">
+                        от {selectedObject.price} рублей
+                      </p>
+                    </div>
 
                     <div className="services__row-photo">
                       <img
@@ -123,17 +132,8 @@ export const Services = () => {
                       />
                     </div>
 
-                    <p className="services__row-type">
-                      срок выполнения
-                      <span> {selectedObject.tern}</span> дней
-                    </p>
 
-                    <div className="services__row-info">
-                      <p className="services__row-price">
-                        от {selectedObject.price} рублей
-                      </p>
-                    </div>
-
+                    <div className="services__row-promo"> {selectedObject.promo} </div>
                   </div>
 
                   <div
@@ -144,8 +144,11 @@ export const Services = () => {
                     }
                   >
                     <div className="services__row-info--modal">
+                    <div className="services__row-stages--img">
+                        <img src="/img/director.png" alt="director" className="services__row-info--manager"/> 
+                      </div>
                       <div className="services__row-stages">
-                      <div className="services__row-stage--title">{selectedObject.stage1}</div>
+                        <div className="services__row-stage--title">{selectedObject.stage1}</div>
                         <div className="services__row-stage--text">{selectedObject.text1}</div>
                         <div className="services__row-stage--title">{selectedObject.stage2}</div>
                         <div className="services__row-stage--text">{selectedObject.text2}</div>
@@ -156,7 +159,9 @@ export const Services = () => {
                         <div className="services__row-stage--title">{selectedObject.stage5}</div>
                         <div className="services__row-stage--text">{selectedObject.text5}</div>
                       </div>
-                      {/* <img src="/public/img/director.png" alt="director" className="services__row-info--manager"/> */}
+                      {/* <div className="services__row-stages--img">
+                        <img src="/img/director.png" alt="director" className="services__row-info--manager"/> 
+                      </div> */}
 
                     </div>
 
@@ -186,7 +191,6 @@ export const Services = () => {
                   </div>
                 </div>
 
-                {/* <p className="btn btn--more"> Подробнее </p> */}
               </div>
             
             )}

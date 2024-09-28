@@ -44,6 +44,7 @@
     }
 
     &-item.modal {
+      padding: 15px;
       width: 80%;
       position: fixed;
       top: 10%;
@@ -56,21 +57,26 @@
       font-weight: 800;
       margin: 5px 0 5px;
       min-height: 60px;
-      &--preview {
+      &--modal {
         text-transform: uppercase;
         font-weight: 900;
+        margin: 20px 0 10px;
+        // min-height: max-content;
       }
     }
 
     &-info {
       display: flex;
       justify-content: space-between;
+      margin-bottom: 10px;
       &--modal {
         display: flex;
         flex-direction: row;
+        gap: 25px;
+        align-items: end;
       }
       &--manager {
-        width: 300px;
+        width: 250px;
       }
     }
 
@@ -91,9 +97,10 @@
       &--title {
         font-size: 24px;
         font-weight: 600;
+        margin: 10px 0 5px;
       }
       &--text {
-        font-size: 18px;
+        font-size: 20px;
       }
     }
 
@@ -101,9 +108,10 @@
       &--title {
         font-size: 24px;
         font-weight: 600;
+        margin: 10px 0 5px;
       }
       &--answer {
-        font-size: 18px;
+        font-size: 20px;
       }
     }
   }
