@@ -1,4 +1,6 @@
 import { useState } from "react";
+import React from 'react';
+import CompareImage from 'react-compare-image';
 import { servicesArray } from "../../constants/services.js";
 
 export const Services = () => {
@@ -110,6 +112,8 @@ export const Services = () => {
                     <p className="services__row-type--modal">{selectedObject.service}</p>
                     
                     <div className="services__row-info">
+                      <div className="services__row-promo"> {selectedObject.promo} </div>
+
                       <p className="services__row-type--tern">
                         срок выполнения
                         <span> {selectedObject.tern}</span> дней
@@ -119,7 +123,7 @@ export const Services = () => {
                       </p>
                     </div>
 
-                    <div className="services__row-photo">
+                    {/* <div className="services__row-photo">
                       <img
                         src={selectedObject.imgBefore}
                         alt="photo"
@@ -130,10 +134,15 @@ export const Services = () => {
                         alt="photo"
                         className="services__row-img--preview"
                       />
-                    </div>
+                    </div> */}
 
+                    <CompareImage
+                        leftImage={selectedObject.imgBefore}                       
+                        rightImage={selectedObject.imgAfter}                        
+                      />
 
-                    <div className="services__row-promo"> {selectedObject.promo} </div>
+                    <div className="services__row-promo"> {selectedObject.about1} </div>
+                    <div className="services__row-promo"> {selectedObject.about2} </div>
                   </div>
 
                   <div
