@@ -182,13 +182,6 @@ export const Services = () => {
                           />
                       </div>
                     </div>  
-                     
-                    {/* <div className="services__row-promo">
-                      {selectedObject.about1}
-                    </div> */}
-                    {/* <div className="services__row-promo">
-                      {selectedObject.about2}
-                    </div> */}
                   </div>
                 </div>
 
