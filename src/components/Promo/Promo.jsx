@@ -16,14 +16,6 @@ export const Promo = () => {
               Ручная чистка и реставрация обуви и сумок
             </h1>
           </div>
-          {/* <div className="promo__row-offer">
-            <p className="promo__row-text">
-              Предоставляем скидку 10% на чистку первой пары обуви при заказе
-              через сайт
-            </p>
-            <div className="btn btn--submit">Оставить заявку</div>
-          </div> */}
-          {/* <Send isActive={true} /> */}
         </div>
       </div>
     </section>

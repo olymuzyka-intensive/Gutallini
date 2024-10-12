@@ -13,17 +13,33 @@ function ServicePage() {
 
   return (
     <>
-      <Promo />
-      <div
+      {/* <Promo /> */}
+
+      <section className="promo">
+      <div className="container">
+        <div className="promo__row">
+          <a href="tel:+375445090525">
+            <img className="call" src="/img/icons/phone.svg" alt="customer" />
+          </a>
+          <div className="promo__row-main">
+            <div className="logo">
+              <img src="/img/logo.png" alt="logo" />
+            </div>
+            <h2 className="promo__row-title--service">
+            {selectedObject.service}
+            </h2>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+        <div className="container">
+        <div
         key={selectedObject.id}
-        className="services__row-item"
+        className="services__row"
         data-info={selectedObject.id}
       >
-        <div className="services__chapter">
-          <div className="services__chapter-nav">До/после</div>
-        </div>
-
-        <h3 className="services__row-type--modal">{selectedObject.service}</h3>
+        <h3 className="services__row-type--modal">До/после</h3>
         <div className="services__row-top">
           <p className="services__row-type--tern">
             срок выполнения
@@ -43,10 +59,8 @@ function ServicePage() {
             />
           </div>
         </div>
-
-        <div className="services__chapter">
-          <div className="services__chapter-nav">Этапы работы</div>
-        </div>
+        
+          <h3 className="services__row-type--modal">Этапы работы</h3>
 
         <div className="services__row-stages">
           <div className="services__row-stage--title">
@@ -82,9 +96,8 @@ function ServicePage() {
         </div>
         <div className="services__row-promo">{selectedObject.about1}</div>
 
-        <div className="services__chapter">
-          <div className="services__chapter-nav">Часто задаваемые вопросы</div>
-        </div>
+          <h3 className="services__row-type--modal">Часто задаваемые вопросы</h3>
+
         <div className="services__row-questions">
           <div className="services__row-question--title">
             {selectedObject.question1}
@@ -120,6 +133,9 @@ function ServicePage() {
 
         <div className="services__row-promo">{selectedObject.about2}</div>
       </div>
+
+        </div>
+    </section>
     </>
   );
 }

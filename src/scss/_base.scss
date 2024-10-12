@@ -49,8 +49,11 @@ h1 {
   font-size: 80px;
   text-transform: uppercase;
   // font-weight: 700;
-  line-height: 130%;
-  color: white;         
+  line-height: 130%;       
+  
+  width: 70%;
+  text-align: center;
+  color: white;  
 }
 
 h2 {
@@ -62,6 +65,14 @@ h2 {
   text-transform: uppercase;
 }
 
+h3 {
+  font-family: Finlandica, sans-serif;
+  // font-family: 'Gallinari';
+
+  font-weight: 600;
+  font-size: 32px;
+  text-transform: uppercase;
+}
 
 .call {
   width: 50px;

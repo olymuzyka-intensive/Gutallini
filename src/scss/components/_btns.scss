@@ -37,8 +37,17 @@
   }
 
   &--more {
-    padding: 0;
+    padding: 0 5px 5px;
     font-weight: 500;
     width: auto;
+    color: white;
+    font-weight: 700;
+    background-color: #d78707;
+    &:hover {
+      background: transparent;
+      border-color: #d78707;
+      font-weight: 800;    
+      color: #d78707;
+    }    
   }
 }
