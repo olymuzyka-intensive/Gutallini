@@ -1,4 +1,4 @@
-// import { Header } from './components/Header/Header'
+import { Header } from "./components/Header/Header";
 // import { Promo } from './components/Promo/Promo'
 // import { Send } from './components/Send/Send'
 // import { About } from './components/About/About'
@@ -6,20 +6,22 @@
 // import { How } from './components/How/How'
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from "./pages/Home"
+import Home from "./pages/Home";
 import ServicePage from "./pages/ServicePage";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
-
   return (
     <Router>
-    
-    <Routes>
-      <Route path="/" element={<Home/>}/>
-      <Route path="/service/:id" element={<ServicePage/>}/>
-    </Routes>
+      <ScrollToTop />
+
+      <Header />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/service/:id" element={<ServicePage />} />
+      </Routes>
     </Router>
-  )
+  );
 }
 
-export default App
+export default App;

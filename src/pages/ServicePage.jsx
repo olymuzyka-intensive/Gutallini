@@ -1,11 +1,11 @@
 import { useState } from "react";
 import React from "react";
 import { servicesArray } from "../constants/services";
+import { Send } from "../components/Send/Send";
 
-import { Header } from "../components/Header/Header";
-import { Promo } from "../components/Promo/Promo";
 import CompareImage from "react-compare-image";
 import { useParams } from "react-router-dom";
+// import ScrollToTop from "../components/ScrollToTop";
 
 function ServicePage() {
   const { id } = useParams();
@@ -13,7 +13,6 @@ function ServicePage() {
 
   return (
     <>
-      {/* <Promo /> */}
 
       <section className="promo">
         <div className="container">
@@ -29,29 +28,41 @@ function ServicePage() {
                 {selectedObject.service}
               </h2>
             </div>
+
+            <Send isActive={true} />
+            <div className="services__row-about--promo">{selectedObject.about2}</div>
           </div>
         </div>
       </section>
       <section>
         <div className="container">
-          <div
+          <div            
             key={selectedObject.id}
             className="services__row"
             data-info={selectedObject.id}
           >
-            <h3 className="services__row-type--modal">До/после</h3>
+            <h3 className="services__row-type--desc">До/после</h3>
             <div className="services__row-top">
-              <p className="services__row-type--tern">
-                срок выполнения
-                <span> {selectedObject.tern}</span> дней
-              </p>
-              <p className="services__row-type--price">
-                от {selectedObject.price} рублей
-              </p>
+              <div className="services__row-promo">{selectedObject.promo}</div>
             </div>
 
             <div className="services__row-bottom">
-              <div className="services__row-promo">{selectedObject.promo}</div>
+              <div className="services__row-content">
+                <p className="services__row-type--tern">
+                  срок выполнения от
+                  <span> {selectedObject.tern}</span> дней
+                </p>
+                <p className="services__row-type--price">
+                  стоимость услуги от {selectedObject.price} рублей
+                </p>
+                <div className="services__row-about">
+                  {selectedObject.about1}
+                </div>
+                {/* <div className="services__row-about">
+                  {selectedObject.about2}
+                </div> */}
+              </div>
+
               <div className="services__row-comparison">
                 <CompareImage
                   leftImage={selectedObject.imgBefore}
@@ -59,12 +70,14 @@ function ServicePage() {
                 />
               </div>
             </div>
+            <Send isActive={false} />
 
-            <h3 className="services__row-type--modal">Этапы работы</h3>
+            <h3 className="services__row-type--desc">Этапы работы</h3>
 
             <ul className="services__row-stages">
-              {selectedObject.stages.map((item, index) => (
-                <li key={index}>
+              {selectedObject.stages.map((item) => (
+                <li key={item.idx} className="services__row-stage">
+                  {/* {console.log(item.idx)} */}
                   <div className="services__row-stage--title">
                     {item.stage}
                     {/* {console.log(item.stage)} */}
@@ -77,30 +90,33 @@ function ServicePage() {
               ))}
             </ul>
 
-            <div className="services__row-promo">{selectedObject.about1}</div>
-
-            <h3 className="services__row-type--modal">
+            <h3 className="services__row-type--desc">
               Часто задаваемые вопросы
             </h3>
 
             <ul className="services__row-questions">
-              {selectedObject.questions.map((item, idx) => (
+              {selectedObject.questions.map((item) => (
                 <>
-                  <li key={idx}>
+                  <li key={item.question} className="services__row-question">
+                    {/* {console.log(item.question)} */}
                     <div className="services__row-question--title">
                       {item.question}
+                      {/* {console.log(item.question)} */}
                     </div>
                     <div className="services__row-question--answer">
                       {item.answer}
+                      {/* {console.log(item.answer)} */}
                     </div>
                   </li>
                 </>
               ))}
             </ul>
-            <div className="services__row-promo">{selectedObject.about2}</div>
+            <Send isActive={false} />
           </div>
         </div>
       </section>
+      {/* <ScrollToTop/> */}
+
     </>
   );
 }
