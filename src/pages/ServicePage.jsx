@@ -1,19 +1,24 @@
 import { useState } from "react";
 import React from "react";
+import { AiOutlineMinus, AiOutlinePlus } from "react-icons/ai";
 import { servicesArray } from "../constants/services";
 import { Send } from "../components/Send/Send";
 
 import CompareImage from "react-compare-image";
 import { useParams } from "react-router-dom";
-// import ScrollToTop from "../components/ScrollToTop";
 
 function ServicePage() {
   const { id } = useParams();
   const selectedObject = servicesArray.find((service) => service.id == id);
+  const [questions, setQuestions] = useState(selectedObject.questions);
+  const [openIndex, setOpenIndex] = useState(null);
+
+  const handleToggle = (index) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
 
   return (
     <>
-
       <section className="promo">
         <div className="container">
           <div className="promo__row">
@@ -30,13 +35,15 @@ function ServicePage() {
             </div>
 
             <Send isActive={true} />
-            <div className="services__row-about--promo">{selectedObject.about2}</div>
+            <div className="services__row-about--promo">
+              {selectedObject.about2}
+            </div>
           </div>
         </div>
       </section>
       <section>
         <div className="container">
-          <div            
+          <div
             key={selectedObject.id}
             className="services__row"
             data-info={selectedObject.id}
@@ -77,14 +84,11 @@ function ServicePage() {
             <ul className="services__row-stages">
               {selectedObject.stages.map((item) => (
                 <li key={item.idx} className="services__row-stage">
-                  {/* {console.log(item.idx)} */}
                   <div className="services__row-stage--title">
                     {item.stage}
-                    {/* {console.log(item.stage)} */}
                   </div>
                   <div className="services__row-stage--text">
                     {item.text}
-                    {/* {console.log(item.text)} */}
                   </div>
                 </li>
               ))}
@@ -94,29 +98,36 @@ function ServicePage() {
               Часто задаваемые вопросы
             </h3>
 
-            <ul className="services__row-questions">
-              {selectedObject.questions.map((item) => (
-                <>
-                  <li key={item.question} className="services__row-question">
-                    {/* {console.log(item.question)} */}
-                    <div className="services__row-question--title">
-                      {item.question}
-                      {/* {console.log(item.question)} */}
-                    </div>
+            <div className="services__row-questions">
+              {questions.map((item, index) => (
+                <div key={item.id} className="services__row-question">
+                  <div
+                    className="services__row-question--title"
+                    onClick={() => handleToggle(index)}
+                  >
+                    {item.question}
+                  <button
+                      className="btn btn--switch"
+                      onClick={() => handleToggle(index)}
+                    >
+                      {openIndex === index ? <AiOutlineMinus /> : <AiOutlinePlus />}
+                    </button>  
+                  </div>  
+                  
+                  {openIndex === index && (
                     <div className="services__row-question--answer">
                       {item.answer}
-                      {/* {console.log(item.answer)} */}
                     </div>
-                  </li>
-                </>
+              )}       
+                </div>
+                
               ))}
-            </ul>
+            </div>
             <Send isActive={false} />
           </div>
         </div>
       </section>
       {/* <ScrollToTop/> */}
-
     </>
   );
 }
