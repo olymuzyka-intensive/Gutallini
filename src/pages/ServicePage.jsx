@@ -6,9 +6,11 @@ import { Send } from "../components/Send/Send";
 
 import CompareImage from "react-compare-image";
 import { useParams } from "react-router-dom";
+// import ScrollToTop from "../components/ScrollToTop";
 
 function ServicePage() {
   const { id } = useParams();
+  
   const selectedObject = servicesArray.find((service) => service.id == id);
   const [questions, setQuestions] = useState(selectedObject.questions);
   const [openIndex, setOpenIndex] = useState(null);
@@ -19,6 +21,8 @@ function ServicePage() {
 
   return (
     <>
+      {/* <ScrollToTop/> */}
+
       <section className="promo">
         <div className="container">
           <div className="promo__row">
@@ -127,7 +131,6 @@ function ServicePage() {
           </div>
         </div>
       </section>
-      {/* <ScrollToTop/> */}
     </>
   );
 }

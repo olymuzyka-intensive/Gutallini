@@ -21,6 +21,7 @@ function Home() {
 
   return (
     <>
+    
     <Promo />
     <Send isActive={false}/>
 

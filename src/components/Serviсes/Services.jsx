@@ -35,7 +35,7 @@ export const Services = () => {
           <h2 className="services__row-title">Услуги</h2>
           <div className="services__row-section">
             {servicesArray.map((item) => (
-              <div
+              <Link to={`/service/${item.id}`}
                 key={item.id}
                 className="services__row-item"
                 data-info={item.id}
@@ -49,9 +49,9 @@ export const Services = () => {
                 <p className="services__row-type">{item.service}</p>
                 <div className="services__row-info">
                   <p className="services__row-price">от {item.price} рублей</p>
-                  <Link to={`/service/${item.id}`} className="btn btn--more"> Подробнее </Link>
+                  <p className="btn btn--more"> Подробнее </p>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>

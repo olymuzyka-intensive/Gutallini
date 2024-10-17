@@ -43,18 +43,19 @@
     color: white;
     font-weight: 700;
     background-color: #d78707;
-    &:hover {
-      background: transparent;
-      border-color: #d78707;
-      font-weight: 800;    
-      color: #d78707;
-    }    
+    // &:hover {
+    //   background: transparent;
+    //   border-color: #d78707;
+    //   font-weight: 800;    
+    //   color: #d78707;
+    // }    
   }
 
   &--switch {
     padding: 5px 8px;
     font-weight: 500;
-    width: auto;
+    width: 30px;
+    height: 30px;
     color: white;
     font-weight: 700;
     background-color: #d78707;  
