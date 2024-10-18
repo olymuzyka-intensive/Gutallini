@@ -52,11 +52,11 @@ function ServicePage() {
           </div>
         </div>
       </section>
-      <section>
+      <section className="services">
         <div className="container">
           <div
             key={selectedObject.id}
-            className="services__row"
+            className="services__row--page"
             data-info={selectedObject.id}
           >
             <div className="services__row-top">
