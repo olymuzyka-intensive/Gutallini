@@ -10,7 +10,7 @@ import { useParams } from "react-router-dom";
 
 function ServicePage() {
   const { id } = useParams();
-  
+
   const selectedObject = servicesArray.find((service) => service.id == id);
   const [questions, setQuestions] = useState(selectedObject.questions);
   const [openIndex, setOpenIndex] = useState(null);
@@ -30,18 +30,25 @@ function ServicePage() {
               <img className="call" src="/img/icons/phone.svg" alt="customer" />
             </a>
             <div className="promo__row-main">
-              <div className="logo">
-                <img src="/img/logo.png" alt="logo" />
-              </div>
               <h2 className="promo__row-title--service">
                 {selectedObject.service}
               </h2>
+              <div className="promo__row-type">
+                <div className="promo__row-type--tern">
+                  <img src="/img/icons/term.svg" alt="tern" />
+                  <p> от {selectedObject.tern} дней</p>
+                </div>
+                <div className="promo__row-type--price">
+                  <img src="/img/icons/price.svg" alt="price" />
+                  <p>
+                    {" "}
+                    от <span>{selectedObject.price}</span> рублей
+                  </p>
+                </div>
+              </div>
             </div>
 
             <Send isActive={true} />
-            <div className="services__row-about--promo">
-              {selectedObject.about2}
-            </div>
           </div>
         </div>
       </section>
@@ -52,26 +59,19 @@ function ServicePage() {
             className="services__row"
             data-info={selectedObject.id}
           >
-            <h3 className="services__row-type--desc">До/после</h3>
             <div className="services__row-top">
               <div className="services__row-promo">{selectedObject.promo}</div>
             </div>
+            <h3 className="services__row-type--desc">До/после</h3>
 
             <div className="services__row-bottom">
               <div className="services__row-content">
-                <p className="services__row-type--tern">
-                  срок выполнения от
-                  <span> {selectedObject.tern}</span> дней
-                </p>
-                <p className="services__row-type--price">
-                  стоимость услуги от {selectedObject.price} рублей
-                </p>
                 <div className="services__row-about">
                   {selectedObject.about1}
                 </div>
-                {/* <div className="services__row-about">
+                <div className="services__row-about">
                   {selectedObject.about2}
-                </div> */}
+                </div>
               </div>
 
               <div className="services__row-comparison">
@@ -88,12 +88,8 @@ function ServicePage() {
             <ul className="services__row-stages">
               {selectedObject.stages.map((item) => (
                 <li key={item.idx} className="services__row-stage">
-                  <div className="services__row-stage--title">
-                    {item.stage}
-                  </div>
-                  <div className="services__row-stage--text">
-                    {item.text}
-                  </div>
+                  <div className="services__row-stage--title">{item.stage}</div>
+                  <div className="services__row-stage--text">{item.text}</div>
                 </li>
               ))}
             </ul>
@@ -110,21 +106,24 @@ function ServicePage() {
                     onClick={() => handleToggle(index)}
                   >
                     {item.question}
-                  <button
+                    <button
                       className="btn btn--switch"
                       onClick={() => handleToggle(index)}
                     >
-                      {openIndex === index ? <AiOutlineMinus /> : <AiOutlinePlus />}
-                    </button>  
-                  </div>  
-                  
+                      {openIndex === index ? (
+                        <AiOutlineMinus />
+                      ) : (
+                        <AiOutlinePlus />
+                      )}
+                    </button>
+                  </div>
+
                   {openIndex === index && (
                     <div className="services__row-question--answer">
                       {item.answer}
                     </div>
-              )}       
+                  )}
                 </div>
-                
               ))}
             </div>
             <Send isActive={false} />
