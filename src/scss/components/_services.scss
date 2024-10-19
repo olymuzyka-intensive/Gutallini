@@ -66,13 +66,14 @@
     &-info {
       display: flex;
       justify-content: space-between;
-      margin-bottom: 10px;
+      // margin-bottom: 10px;
     }
 
     &-content {
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      justify-content: space-evenly;
+      align-items: center;
       gap: 25px;
     }
 
@@ -87,9 +88,8 @@
       text-align: center;
       font-size: 21px;
       font-weight: 500;
-      margin-top: 50px;
+      // margin-top: 50px;
       display: flex;
-      justify-self: end;
       &--promo {
         color: white;
         text-align: center;
@@ -136,11 +136,11 @@
     }
 
     &-questions {
-      margin: 30px 0 70px;
+      margin: 50px 0;
     }
 
     &-question {
-      margin: 15px 0;      
+      margin: 15px 0 30px;      
       &--title {
         font-size: 24px;
         font-weight: 600;
@@ -152,6 +152,8 @@
       }
       &--answer {
         font-size: 20px;
+        padding-top: 10px;
+        width: 90%;
       }
     }
 

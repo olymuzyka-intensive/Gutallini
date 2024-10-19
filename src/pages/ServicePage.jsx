@@ -66,12 +66,14 @@ function ServicePage() {
 
             <div className="services__row-bottom">
               <div className="services__row-content">
+                <div className="btn btn--call">Оставить заявку</div>
                 <div className="services__row-about">
                   {selectedObject.about1}
                 </div>
-                <div className="services__row-about">
+
+                {/* <div className="services__row-about">
                   {selectedObject.about2}
-                </div>
+                </div> */}
               </div>
 
               <div className="services__row-comparison">
@@ -81,7 +83,7 @@ function ServicePage() {
                 />
               </div>
             </div>
-            <Send isActive={false} />
+            <div className="services__row-promo">{selectedObject.about2}</div>
 
             <h3 className="services__row-type--desc">Этапы работы</h3>
 
@@ -110,10 +112,15 @@ function ServicePage() {
                       className="btn btn--switch"
                       onClick={() => handleToggle(index)}
                     >
-                      {openIndex === index ? (
+                      {/* {openIndex === index ? (
                         <AiOutlineMinus />
                       ) : (
                         <AiOutlinePlus />
+                      )} */}
+                      {openIndex === index ? (
+                        <img src="/public/img/icons/-.svg" />
+                      ) : (
+                        <img src="/public/img/icons/+.svg" />
                       )}
                     </button>
                   </div>
