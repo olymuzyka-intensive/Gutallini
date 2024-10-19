@@ -118,9 +118,9 @@ function ServicePage() {
                         <AiOutlinePlus />
                       )} */}
                       {openIndex === index ? (
-                        <img src="/public/img/icons/-.svg" />
+                        <img src="/img/icons/-.svg" />
                       ) : (
-                        <img src="/public/img/icons/+.svg" />
+                        <img src="/img/icons/+.svg" />
                       )}
                     </button>
                   </div>
