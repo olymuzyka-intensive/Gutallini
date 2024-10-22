@@ -36,9 +36,9 @@ export const How = () => {
           <a href="tel:+375445090525">
             <div className="btn btn--call">Позвонить</div>
           </a>
-          <div className="btn btn--send">Отправить фото</div>
+          {/* <div className="btn btn--send">Отправить фото</div> */}
 
-          {/* <div className="btn btn--submit">Оставить заявку</div> */}
+          <div className="btn btn--submit">Оставить заявку</div>
           </ul>
 
           <h2 className="how__row-title">Вы можете посетить нас и оформить заказ лично</h2>

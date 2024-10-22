@@ -1,6 +1,6 @@
 import { useState } from "react";
 import React from "react";
-import { AiOutlineMinus, AiOutlinePlus } from "react-icons/ai";
+// import { AiOutlineMinus, AiOutlinePlus } from "react-icons/ai";
 import { servicesArray } from "../constants/services";
 import { Send } from "../components/Send/Send";
 

@@ -1,4 +1,15 @@
+import { useState } from "react";
+import { SendPopup } from "../SendPopup/SendPopup";
+
 export const Send = ({ isActive }) => {
+  const [showModal, setShowModal] = useState(false)
+
+  const openModal = () => {
+    setShowModal(true)
+  }
+  const closeModal = () => {
+    setShowModal(false)
+  }
   return (
     <section className="send">
       <div className="container">
@@ -54,9 +65,11 @@ export const Send = ({ isActive }) => {
           <p className="send__row-appeal">
             Пришлите нам фотографии вашего изделия и мы оценим стоимость работы
           </p>
-          <div className={isActive ? "btn btn--send-promo" : "btn btn--send"}>
+          <div className={isActive ? "btn btn--send-promo" : "btn btn--send"} onClick={openModal}>
             Отправить фото
           </div>
+          <SendPopup isOpen={showModal} onClose={closeModal}/>
+          
         </div>
       </div>
     </section>
