@@ -1,4 +1,16 @@
+import { SendPopup } from "../SendPopup/SendPopup";
+import { useState } from "react";
+
 export const How = () => {
+  const [showModal, setShowModal] = useState(false)
+
+  const openModal = () => {
+    setShowModal(true)
+  }
+  const closeModal = () => {
+    setShowModal(false)
+  }
+
   return (
     <section className="how" id="contacts">
       <div className="container">
@@ -34,11 +46,15 @@ export const How = () => {
 
           <ul className="feedback">
           <a href="tel:+375445090525">
-            <div className="btn btn--call">Позвонить</div>
+            <div className="btn btn--send">Позвонить</div>
           </a>
           {/* <div className="btn btn--send">Отправить фото</div> */}
 
-          <div className="btn btn--submit">Оставить заявку</div>
+          {/* <div className="btn btn--submit">Оставить заявку</div> */}
+          <div className="btn btn--submit" onClick={openModal}>
+          Оставить заявку
+          </div>
+          <SendPopup isOpen={showModal} onClose={closeModal}/>
           </ul>
 
           <h2 className="how__row-title">Вы можете посетить нас и оформить заказ лично</h2>
