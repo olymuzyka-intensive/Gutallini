@@ -25,11 +25,13 @@ export const SendPopup = ({ isOpen, onClose }) => {
           console.log('FAILED...', error.text);
         },
       );
+      onClose()
+      alert('Заявка принята')
   }
 
   return (
-    <form className="form" ref={form} onSubmit={sendEmail}>
-      {/* <form className="form" action="sendmessage.php" method="post"> */}
+    <form className="form" ref={form} onSubmit={sendEmail} >
+      {/* <form className="form" action="sendmessage.php" method="post"onSubmit={sendEmail}> */}
       <div onClick={onClose} className="form__close">
         <svg
           width="30px"
