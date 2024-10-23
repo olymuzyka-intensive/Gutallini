@@ -107,6 +107,7 @@ export const SendPopup = ({ isOpen, onClose }) => {
         placeholder="Опишите пожалуйста ваш запрос"
       ></textarea>
       <p className="form__subtitle">Загрузить фото </p>
+      <input type="text" name="link" id="link" placeholder="Поделитесь ссылкой на фото (временное решение)" />
       {/* <input type="file" name="photo" multiple accept="image/*,image/jpeg" /> */}
       <input className="btn btn--send" type="submit"/>
        
