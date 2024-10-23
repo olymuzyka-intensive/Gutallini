@@ -30,7 +30,7 @@ export const SendPopup = ({ isOpen, onClose }) => {
   }
 
   return (
-    <form className="form" ref={form} onSubmit={sendEmail} >
+    <form className="form" ref={form} onSubmit={sendEmail}>
       {/* <form className="form" action="sendmessage.php" method="post"onSubmit={sendEmail}> */}
       <div onClick={onClose} className="form__close">
         <svg
@@ -64,8 +64,8 @@ export const SendPopup = ({ isOpen, onClose }) => {
         </svg>
       </div>
       <p className="form__title">Отправить фото</p>
-      <input type="name" name="name" id="name" placeholder="Ваше имя" />
-      <input type="tel" name="tel" id="tel" placeholder="Ваш номер телефона" />
+      <input type="name" name="name" id="name" placeholder="Ваше имя"  pattern="[А-Яа-я]{3,}" required/>
+      <input type="tel" name="tel" id="tel" placeholder="Ваш номер телефона" pattern="^\+375\s?\(?(29|25|44|33|17)\)?\s?\d{3}-?\d{2}-?\d{2}$" required/>
       <p className="form__subtitle">Какая услуга Вам необходима?</p>
       <p className="form__description">
         Выберите вариант из представленного списка
@@ -109,8 +109,9 @@ export const SendPopup = ({ isOpen, onClose }) => {
       <p className="form__subtitle">Загрузить фото </p>
       <input type="text" name="link" id="link" placeholder="Поделитесь ссылкой на фото (временное решение)" />
       {/* <input type="file" name="photo" multiple accept="image/*,image/jpeg" /> */}
-      <input className="btn btn--send" type="submit"/>
-       
+      {/* <input className="btn btn--send" type="submit"/> */}
+      <button className="btn btn--send_foto" type="submit">Отправить</button>
+
     </form>
   );
 };
