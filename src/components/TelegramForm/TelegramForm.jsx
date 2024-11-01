@@ -110,7 +110,6 @@ export const TelegramForm = ({ isOpen, onClose }) => {
         name="name"
         id="name"
         placeholder="Ваше имя"
-        pattern="[А-Яа-я]{2,}"
         required
         value={textInputName}
         onChange={handleInputChangeName}
