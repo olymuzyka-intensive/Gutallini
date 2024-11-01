@@ -109,6 +109,7 @@ export const TelegramForm = ({ isOpen, onClose }) => {
         type="name"
         name="name"
         id="name"
+        maxLength='50'
         placeholder="Ваше имя"
         required
         value={textInputName}
