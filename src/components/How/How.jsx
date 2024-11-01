@@ -1,4 +1,4 @@
-import { SendPopup } from "../SendPopup/SendPopup";
+import { TelegramForm } from "../TelegramForm/TelegramForm";
 import { useState } from "react";
 
 export const How = () => {
@@ -54,7 +54,7 @@ export const How = () => {
           <div className="btn btn--submit" onClick={openModal}>
           Оставить заявку
           </div>
-          <SendPopup isOpen={showModal} onClose={closeModal}/>
+          <TelegramForm isOpen={showModal} onClose={closeModal}/>
           </ul>
 
           <h2 className="how__row-title">Вы можете посетить нас и оформить заказ лично</h2>

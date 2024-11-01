@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { SendPopup } from "../SendPopup/SendPopup";
+import { TelegramForm } from "../TelegramForm/TelegramForm";
 
 export const Send = ({ isActive }) => {
   const [showModal, setShowModal] = useState(false)
@@ -68,7 +68,7 @@ export const Send = ({ isActive }) => {
           <div className={isActive ? "btn btn--send-promo" : "btn btn--send"} onClick={openModal}>
             Отправить фото
           </div>
-          <SendPopup isOpen={showModal} onClose={closeModal}/>
+          <TelegramForm isOpen={showModal} onClose={closeModal}/>
           
         </div>
       </div>
