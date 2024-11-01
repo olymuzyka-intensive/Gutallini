@@ -1,5 +1,6 @@
 import { TelegramForm } from "../TelegramForm/TelegramForm";
 import { useState } from "react";
+import { TelegramFormRequest } from "../TelegramForm/TelegramFormRequest";
 
 export const How = () => {
   const [showModal, setShowModal] = useState(false)
@@ -54,7 +55,7 @@ export const How = () => {
           <div className="btn btn--submit" onClick={openModal}>
           Оставить заявку
           </div>
-          <TelegramForm isOpen={showModal} onClose={closeModal}/>
+          <TelegramFormRequest isOpen={showModal} onClose={closeModal}/>
           </ul>
 
           <h2 className="how__row-title">Вы можете посетить нас и оформить заказ лично</h2>
