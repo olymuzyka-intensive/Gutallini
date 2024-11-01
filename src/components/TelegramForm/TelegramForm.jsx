@@ -35,47 +35,40 @@ export const TelegramForm = ({ isOpen, onClose }) => {
   const handleSubmit = async (event) => {
     event.preventDefault();
 
-    const formData = new FormData();
-
     const token = "7729156275:AAE2Nd1uYtkddV8W_bOtpZogGyEh_yfShT0";
     const chatId = "1010490009";
-    const url = `https://api.telegram.org/bot${token}/sendPhoto`;
+    const url = `https://api.telegram.org/bot${token}/sendMessage`;
 
-    // photos.forEach((photo) => {
-    //   formData.append("photos", photo);
-    // });
-    // const media = Array.from(photos).map((photo) => {
-    //   formData.append("photos", photo);
-    // });
+    await fetch(url, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        chat_id: chatId,
+        text: `Имя: ${textInputName}\nТелефон: ${textInputPhone}\nУслуга: ${selectedOption}\nКомментарий: ${textArea}`,
+      }),
+    });
 
-    formData.append("textInputName", textInputName);
-    formData.append("textInputPhone", textInputPhone);
+    const data = new FormData();
+    photos.forEach((photo) => {
+      data.append("photo", photo);
+    });
 
-    formData.append("textArea", textArea);
-    formData.append("selectedOption", selectedOption);
+    const photoUrl = `https://api.telegram.org/bot${token}/sendPhoto`;
 
     for (const photo of photos) {
-      const data = new FormData();
       data.append("chat_id", chatId);
+
       data.append("photo", photo);
-      data.append(
-        "caption",
-        `Name: ${textInputName}\nPhone: ${textInputPhone}\nOption: ${selectedOption}\nComment: ${textArea}`
-      );
 
-      try {
-        const response = await fetch(url, {
-          method: "POST",
-          body: data,
-        });
-
-        const result = await response.json();
-        console.log("Успех:", result);
-        onClose()
-      } catch (error) {
-        console.error("Ошибка:", error);
-      }
+      await fetch(photoUrl, {
+        method: "POST",
+        body: data,
+      });
+      data.delete("photo"); // Удаляем предыдущую фотографию, чтобы избежать конфликта
     }
+    onClose();
   };
 
   return (
@@ -117,7 +110,7 @@ export const TelegramForm = ({ isOpen, onClose }) => {
         name="name"
         id="name"
         placeholder="Ваше имя"
-        pattern="[А-Яа-я]{3,}"
+        pattern="[А-Яа-я]{2,}"
         required
         value={textInputName}
         onChange={handleInputChangeName}
@@ -132,7 +125,7 @@ export const TelegramForm = ({ isOpen, onClose }) => {
         value={textInputPhone}
         onChange={handleInputChangePhone}
       />
-      <p className="form__subtitle">Какая услуга Вам необходима?</p>
+      <label className="form__subtitle" for="option">Какая услуга Вам необходима?</label>
       <p className="form__description">
         Выберите вариант из представленного списка
       </p>
@@ -140,8 +133,9 @@ export const TelegramForm = ({ isOpen, onClose }) => {
         name="option-services"
         id="option"
         value={selectedOption}
-        onChange={handleSelectChange}
+        onChange={handleSelectChange} required
       >
+        <option defaultValue="" selected disabled></option>
         <option defaultValue="Полный уход с обновлением цвета">
           Полный уход с обновлением цвета
         </option>
@@ -171,20 +165,21 @@ export const TelegramForm = ({ isOpen, onClose }) => {
         </option>
         <option defaultValue="Патинирование">Патинирование</option>
       </select>
-      <p className="form__subtitle">Комментарии</p>
+      <label className="form__subtitle" for="comments">Комментарии</label>
       <textarea
         value={textArea}
         onChange={handleTextAreaChange}
         name="comments"
         id="comments"
-        placeholder="Опишите пожалуйста ваш запрос"
+        placeholder="Опишите пожалуйста вашу проблему"        
       ></textarea>
-      <p className="form__subtitle">Загрузить фото </p>
+      <label className="form__subtitle" for="files">Загрузить фото </label>
       <input
         type="file"
         id="files"
         accept="image/*"
         multiple
+        required
         onChange={handleFileChange}
       />
       <button className="btn btn--send_foto" type="submit">
