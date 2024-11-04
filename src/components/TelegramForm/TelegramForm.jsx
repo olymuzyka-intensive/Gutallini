@@ -1,4 +1,6 @@
 import React, { useRef, useState } from "react";
+import { servicesArray } from "../../constants/services.js";
+
 
 export const TelegramForm = ({ isOpen, onClose }) => {
   if (!isOpen) return null;
@@ -109,7 +111,7 @@ export const TelegramForm = ({ isOpen, onClose }) => {
         type="name"
         name="name"
         id="name"
-        maxLength='50'
+        maxLength="50"
         placeholder="Ваше имя"
         required
         value={textInputName}
@@ -125,7 +127,9 @@ export const TelegramForm = ({ isOpen, onClose }) => {
         value={textInputPhone}
         onChange={handleInputChangePhone}
       />
-      <label className="form__subtitle" for="option">Какая услуга Вам необходима?</label>
+      <label className="form__subtitle" htmlFor="option">
+        Какая услуга Вам необходима?
+      </label>
       <p className="form__description">
         Выберите вариант из представленного списка
       </p>
@@ -133,47 +137,48 @@ export const TelegramForm = ({ isOpen, onClose }) => {
         name="option-services"
         id="option"
         value={selectedOption}
-        onChange={handleSelectChange} required
+        onChange={handleSelectChange}
+        required
       >
-        <option defaultValue="" selected disabled></option>
-        <option defaultValue="Полный уход с обновлением цвета">
+        <option value="" disabled> </option>
+        <option value="Полный уход с обновлением цвета">
           Полный уход с обновлением цвета
         </option>
-        <option defaultValue="Покраска подошвы">Покраска подошвы</option>
-        <option defaultValue="Замша. Покраска в родной цвет">
+        <option value="Покраска подошвы">Покраска подошвы</option>
+        <option value="Замша. Покраска в родной цвет">
           Замша. Покраска в родной цвет
         </option>
-        <option defaultValue="Чистка и обновление обуви из замши">
+        <option value="Чистка и обновление обуви из замши">
           Чистка и обновление обуви из замши
         </option>
-        <option defaultValue="Чистка и обновление обуви из кожи">
+        <option value="Чистка и обновление обуви из кожи">
           Чистка и обновление обуви из кожи
         </option>
-        <option defaultValue="Реставрация, устранение порезов, царапин, трещин">
+        <option value="Реставрация, устранение порезов, царапин, трещин">
           Реставрация, устранение порезов, царапин, трещин
         </option>
-        <option defaultValue="Текстиль. Полный уход">
-          Текстиль. Полный уход
-        </option>
-        <option defaultValue="Нубук. Полный уход">Нубук. Полный уход</option>
-        <option defaultValue="Выведение реагентов">Выведение реагентов</option>
-        <option defaultValue="Восстановление сумок">
-          Восстановление сумок
-        </option>
-        <option defaultValue="Полный уход комбинированные материалы">
+        <option value="Текстиль. Полный уход">Текстиль. Полный уход</option>
+        <option value="Нубук. Полный уход">Нубук. Полный уход</option>
+        <option value="Выведение реагентов">Выведение реагентов</option>
+        <option value="Восстановление сумок">Восстановление сумок</option>
+        <option value="Полный уход комбинированные материалы">
           Полный уход комбинированные материалы
         </option>
-        <option defaultValue="Патинирование">Патинирование</option>
+        <option value="Патинирование">Патинирование</option>
       </select>
-      <label className="form__subtitle" for="comments">Комментарии</label>
+      <label className="form__subtitle" htmlFor="comments">
+        Комментарии
+      </label>
       <textarea
         value={textArea}
         onChange={handleTextAreaChange}
         name="comments"
         id="comments"
-        placeholder="Опишите пожалуйста вашу проблему"        
+        placeholder="Опишите пожалуйста вашу проблему"
       ></textarea>
-      <label className="form__subtitle" for="files">Загрузить фото </label>
+      <label className="form__subtitle" htmlFor="files">
+        Загрузить фото
+      </label>
       <input
         type="file"
         id="files"

@@ -12,10 +12,9 @@ export const TelegramFormRequest = ({ isOpen, onClose }) => {
   const [textArea, setTextArea] = useState("");
   const [selectedOption, setSelectedOption] = useState("");
 
-  const [date, setDate] = useState('')
-  const [time, setTime] = useState('')
-  const [timeTo, setTimeTo] = useState('')
-
+  const [date, setDate] = useState("");
+  const [time, setTime] = useState("");
+  const [timeTo, setTimeTo] = useState("");
 
   const handleFileChange = (event) => {
     setPhotos([...event.target.files]);
@@ -47,7 +46,6 @@ export const TelegramFormRequest = ({ isOpen, onClose }) => {
   const handleSelectTimeTo = (event) => {
     setTimeTo(event.target.value);
   };
-
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -126,7 +124,7 @@ export const TelegramFormRequest = ({ isOpen, onClose }) => {
         type="name"
         name="name"
         id="name"
-        maxLength='50'
+        maxLength="50"
         placeholder="Ваше имя"
         required
         value={textInputName}
@@ -142,72 +140,74 @@ export const TelegramFormRequest = ({ isOpen, onClose }) => {
         value={textInputPhone}
         onChange={handleInputChangePhone}
       />
-      <label className="form__subtitle" for="option">Какая услуга Вам необходима?</label>
-      <p className="form__description">
+      <div className="form__subtitle">Какая услуга Вам необходима?</div>
+      <label className="form__description" htmlFor="option">
         Выберите вариант из представленного списка
-      </p>
+      </label>
       <select
         name="option-services"
         id="option"
         value={selectedOption}
-        onChange={handleSelectChange} required
+        onChange={handleSelectChange}
+        required
       >
-        <option defaultValue="" selected disabled></option>
-        <option defaultValue="Полный уход с обновлением цвета">
+        <option value="" disabled></option>
+        <option value="Полный уход с обновлением цвета">
           Полный уход с обновлением цвета
         </option>
-        <option defaultValue="Покраска подошвы">Покраска подошвы</option>
-        <option defaultValue="Замша. Покраска в родной цвет">
+        <option value="Покраска подошвы">Покраска подошвы</option>
+        <option value="Замша. Покраска в родной цвет">
           Замша. Покраска в родной цвет
         </option>
-        <option defaultValue="Чистка и обновление обуви из замши">
+        <option value="Чистка и обновление обуви из замши">
           Чистка и обновление обуви из замши
         </option>
-        <option defaultValue="Чистка и обновление обуви из кожи">
+        <option value="Чистка и обновление обуви из кожи">
           Чистка и обновление обуви из кожи
         </option>
-        <option defaultValue="Реставрация, устранение порезов, царапин, трещин">
+        <option value="Реставрация, устранение порезов, царапин, трещин">
           Реставрация, устранение порезов, царапин, трещин
         </option>
-        <option defaultValue="Текстиль. Полный уход">
-          Текстиль. Полный уход
-        </option>
-        <option defaultValue="Нубук. Полный уход">Нубук. Полный уход</option>
-        <option defaultValue="Выведение реагентов">Выведение реагентов</option>
-        <option defaultValue="Восстановление сумок">
-          Восстановление сумок
-        </option>
-        <option defaultValue="Полный уход комбинированные материалы">
+        <option value="Текстиль. Полный уход">Текстиль. Полный уход</option>
+        <option value="Нубук. Полный уход">Нубук. Полный уход</option>
+        <option value="Выведение реагентов">Выведение реагентов</option>
+        <option value="Восстановление сумок">Восстановление сумок</option>
+        <option value="Полный уход комбинированные материалы">
           Полный уход комбинированные материалы
         </option>
-        <option defaultValue="Патинирование">Патинирование</option>
+        <option value="Патинирование">Патинирование</option>
       </select>
-      <label className="form__subtitle" for="comments">Комментарии</label>
+      <label className="form__subtitle" htmlFor="comments">
+        Комментарии
+      </label>
       <textarea
         value={textArea}
         onChange={handleTextAreaChange}
         name="comments"
         id="comments"
-        placeholder="Опишите пожалуйста вашу проблему"        
+        placeholder="Опишите пожалуйста вашу проблему"
       ></textarea>
-      <label className="form__subtitle" for="files">Вы можете загрузить фото </label>
+      <label className="form__subtitle" htmlFor="files">
+        Вы можете загрузить фото
+      </label>
       <input
         type="file"
         id="files"
         accept="image/*"
-        multiple        
+        multiple
         onChange={handleFileChange}
       />
 
-      <label for="date">Мы с Вами свяжемся</label>
-      <label className="form__description" for="localdate">
-        Выберите день и удобное время 
+      <div className="form__subtitle">Мы с Вами свяжемся</div>
+      <label className="form__description" htmlFor="date">
+        Выберите день и удобное время
       </label>
-      <input type="date" id="date" name="date" onChange={handleSelectDate}/>
-      <input type="time" id="time" name="date" onChange={handleSelectTime}/>
-      <input type="time" id="time" name="date" onChange={handleSelectTimeTo}/>
-
-
+      
+      <div className="form__communicate">
+        <input type="date" id="date" name="date" onChange={handleSelectDate} /> 
+        <input type="time" id="time" name="time" onChange={handleSelectTime} />
+        <input type="time" id="timeTo" name="timeTo" onChange={handleSelectTimeTo} />
+      </div>
       <button className="btn btn--send_foto" type="submit">
         Отправить
       </button>
