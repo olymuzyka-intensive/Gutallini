@@ -6,10 +6,20 @@ import { Send } from "../components/Send/Send";
 
 import CompareImage from "react-compare-image";
 import { useParams } from "react-router-dom";
+import { TelegramFormRequest } from "../components/TelegramForm/TelegramFormRequest";
 // import ScrollToTop from "../components/ScrollToTop";
 
 function ServicePage() {
   const { id } = useParams();
+
+  const [showModal, setShowModal] = useState(false)
+
+  const openModal = () => {
+    setShowModal(true)
+  }
+  const closeModal = () => {
+    setShowModal(false)
+  }
 
   const selectedObject = servicesArray.find((service) => service.id == id);
   const [questions, setQuestions] = useState(selectedObject.questions);
@@ -66,7 +76,9 @@ function ServicePage() {
 
             <div className="services__row-bottom">
               <div className="services__row-content">
-                <div className="btn btn--call">Оставить заявку</div>
+                <div className="btn btn--call" onClick={openModal}>Оставить заявку</div>
+                <TelegramFormRequest isOpen={showModal} onClose={closeModal}/>
+
                 <div className="services__row-about">
                   {selectedObject.about1}
                 </div>
