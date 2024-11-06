@@ -9,22 +9,22 @@
 
         &-appeal {
             width: 550px;
-            font-size: 26px;
+            font-size: 1.5625rem;//25px;
         }        
     }
-    &__row--promo {
-        background-color: rgba(0, 0, 0, .5);
-        border: rgba(0, 0, 0, 0);
-        border-radius: 15px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 20px;    
-        color: white; 
-
-        // margin-top: 15%;
-        svg {
-            display: none;
-        }   
-    }
-}
+    &__row--promo { 
+        background-color: rgba(0, 0, 0, .5); 
+        border: rgba(0, 0, 0, 0); 
+        border-radius: 15px; 
+        display: flex; 
+        align-items: center; 
+        justify-content: space-between; 
+        padding: 20px;     
+        color: $white;  
+ 
+        // margin-top: 15%; 
+        svg { 
+            display: none; 
+        }    
+    } 
+} 

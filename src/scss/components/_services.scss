@@ -7,6 +7,7 @@
     &--page {
       padding: 15px 0;
     }
+
     &-section {
       margin: 10px 0;
       display: grid;
@@ -30,7 +31,7 @@
       padding: 5px; //10
       border: 1px solid transparent;
       border-radius: 15px;
-      background: white;
+      background: $white;
       box-shadow: 0px 1px 1px 1px rgba(34, 60, 80, 0.2);
       // height: max-content;
       cursor: pointer;
@@ -43,9 +44,10 @@
     }
 
     &-type {
-      font-weight: 700;
+      // font-weight: 600;
       margin: 5px 0 5px;
       min-height: 60px;
+      font-size: 1.25rem;
       &--desc {
         text-transform: uppercase;
         font-weight: 900;
@@ -57,6 +59,7 @@
       display: flex;
       justify-content: space-between;
       // margin-bottom: 10px;
+      // font-size: 1.25rem;
     }
 
     &-content {
@@ -69,26 +72,22 @@
 
     &-promo {
       text-align: center;
-      font-size: 22px;
-      font-weight: 700;
+      font-size: 1.375rem;//22px;
+      // font-weight: 700;
       margin: 15px 0 25px;
     }
 
     &-about {
       text-align: center;
-      font-size: 21px;
-      font-weight: 500;
-      // margin-top: 50px;
-      display: flex;
-      &--promo {
-        color: white;
-        text-align: center;
-        font-size: 25px;
-      }
-    }
-
-    &-price {
-      font-weight: 500;
+      font-size: 1.25rem;//21px;
+      // font-weight: 500;
+      // margin-top: 50px; 
+      display: flex; 
+      // &--promo { 
+      //   color: $white; 
+      //   text-align: center; 
+      //   font-size: 25px; 
+      // }
     }
 
     &-stages {
@@ -106,7 +105,7 @@
       padding: 10px;
       border: 1px solid rgba(0, 0, 0, 0);
       border-radius: 15px;
-      background: #fff;
+      background: $white;
       box-shadow: 0px 1px 1px 1px rgba(34, 60, 80, 0.2);
       // height: -moz-max-content;
       // height: max-content;
@@ -116,12 +115,12 @@
         box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
       }
       &--title {
-        font-size: 24px;
-        font-weight: 600;
+        font-size: 1.5rem;//24px;
+        font-weight: 500;
         margin: 10px 0 5px;
       }
       &--text {
-        font-size: 20px;
+        font-size: 1.125rem;//18-20px;
       }
     }
 
@@ -132,18 +131,18 @@
     &-question {
       margin: 15px 0 30px;      
       &--title {
-        font-size: 24px;
-        font-weight: 600;
+        font-size: 1.5rem;//24px;
+        font-weight: 500;
         display: flex;
         justify-content: space-between;
-        border-bottom: 1px solid #d78707;
+        border-bottom: 1px solid $orange;
         padding-bottom: 10px;
         cursor: pointer;
       }
       &--answer {
-        font-size: 20px;
+        font-size: 1.125rem;//18-20px;
         padding-top: 10px;
-        width: 90%;
+        width: 95%;
       }
     }
 

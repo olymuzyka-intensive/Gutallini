@@ -51,7 +51,6 @@ function ServicePage() {
                 <div className="promo__row-type--price">
                   <img src="/img/icons/price.svg" alt="price" />
                   <p>
-                    {" "}
                     от <span>{selectedObject.price}</span> рублей
                   </p>
                 </div>

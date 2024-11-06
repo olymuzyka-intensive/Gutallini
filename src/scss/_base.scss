@@ -3,8 +3,6 @@
 @font-face {
   font-family: 'Gallinari';
   src: url('../fonts/Gallinari-ExtraboldCond.otf');
-  // font-weight: normal;
-  // font-style: normal;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Oi&family=Prata&family=Ubuntu+Condensed&display=swap');
@@ -25,8 +23,10 @@ body {
   // font-family: 'Mulish', Arial, sans-serif;
 
   font-weight: 400;
-  font-size: 16px; //20
-  color: #556B2F;
+  font-size: 16px;
+  color: $main;
+  // line-height: 130%;       
+
 }
 
 ul {
@@ -35,11 +35,8 @@ ul {
 
 a {
   text-decoration: none;
-  font-family: Oswald, sans-serif;
-    font-weight: 400;
-    font-size: 20px;
-    color: #556b2f;
-
+  font-size: 1.25rem;
+  color: $main;
 }
 
 .container {
@@ -51,22 +48,22 @@ h1 {
   // font-family: Finlandica, sans-serif;
   font-family: 'Gallinari';
   // font-family: "Prata", serif;
-  font-size: 80px;
+  font-size: 5rem; //80px
+  line-height: 130%;       
+
   text-transform: uppercase;
   // font-weight: 700;
-  line-height: 130%;       
   
   width: 70%;
   text-align: center;
-  color: white;  
+  color: $white;  
 }
 
 h2 {
   font-family: Finlandica, sans-serif;
   // font-family: 'Gallinari';
-
   font-weight: 600;
-  font-size: 40px;
+  font-size: 2.5rem; //40px;
   text-transform: uppercase;
 }
 
@@ -75,7 +72,7 @@ h3 {
   // font-family: 'Gallinari';
 
   font-weight: 600;
-  font-size: 32px;
+  font-size: 2rem; //32px;
   text-transform: uppercase;
 }
 
@@ -85,7 +82,7 @@ h3 {
   top: 12%;
   right: 2%;
   animation-name: call;
-  animation-duration: 3s;
+  animation-duration: 2s;
   animation-iteration-count: infinite;
   animation-direction: alternate;
   animation-timing-function: ease-in-out;

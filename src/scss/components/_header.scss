@@ -1,5 +1,5 @@
 .header {
-  background-color: rgba(0, 0, 0, 0.9); //0.5
+  background-color: #000000e6; //0.5
   width: 100%;
   position: sticky;
   top: 0;
@@ -17,18 +17,16 @@
     }
 
     &-item a {
-      color: white;
+      color: $white;
     }
 
     &-item {
-      font-size: 22px; //20
-      line-height: 32px; 
       position: relative;
-      border-top: 1px solid transparent;
+      // border-top: 1px solid transparent;
       border-bottom: 1px solid transparent;
       &:hover {
-        border-top-color: white;
-        border-bottom-color: white;
+        // border-top-color: white;
+        border-bottom-color: $white;
       }
     }
 
@@ -126,8 +124,8 @@
 
   &__nav .open a {  
     font-weight: 600; 
-    font-size: 30px; 
+    font-size: 1.875rem;//30px; 
     line-height: 48px; 
-    color: #ffffff; 
+    color: $white; 
   }  
 }  

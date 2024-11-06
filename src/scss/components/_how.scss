@@ -16,14 +16,14 @@
         }
 
         &-item {
-            border: 1px solid #d78707;
+            border: 1px solid $orange;
             border-radius: 15px;
             margin-top: 30px;
             padding: 15px;
             max-width: 33%;
             position: relative;
             &_title {
-                font-size: 26px;
+                font-size: 1.625rem;//26px;
                 margin-bottom: 20px;
                 display: flex;
                 gap: 20px;
@@ -32,8 +32,11 @@
                 }
             }
 
-            &_text span {
-                color:  #d78707;                           
+            &_text {
+                font-size: 1.125rem; 
+                span {
+                color:  $orange;  
+                }                        
             }
             &--address {
                 position: absolute;
@@ -41,7 +44,7 @@
                 width: 300px;
                 z-index: 99;
                 top: 150px;
-                background: white;
+                background: $white;
             }
         }
     }
@@ -63,7 +66,7 @@
 
 iframe {
     border-radius: 15px;
-    border: 1px solid  #d78707;
+    border: 1px solid  $orange;
     position: absolute;
     top: 30px;
 }

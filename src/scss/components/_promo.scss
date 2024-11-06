@@ -19,10 +19,10 @@
 
       &-title {
          &--service {
-            font-size: 65px;
+            font-size: 3rem;//48-65px;
             width: 70%;
             text-align: center;
-            color: white; 
+            color: $white; 
          }      
       }
 
@@ -40,12 +40,12 @@
          margin-top: 100px;
       }
 
-      &-text {
-         color: white;
-         font-size: 25px; //28
-         line-height: 42px; //временная 160%
-         width: 60%;
-      }
+      // &-text {
+      //    color: $white;
+      //    font-size: 1.5rem;//25px;
+      //    line-height: 42px; //временная 160%
+      //    width: 60%;
+      // }
 
       &-type {
          display: flex;
@@ -55,8 +55,8 @@
             display: flex;
             flex-direction: row;
             gap: 15px;
-            color: white;
-            font-size: 25px;
+            color: $white;
+            font-size: 1.5rem;//25px;
             img {
                width: 50px;
                height: 50px;
