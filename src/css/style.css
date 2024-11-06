@@ -17,7 +17,7 @@ html {
 body {
   font-family: Oswald, sans-serif;
   font-weight: 400;
-  font-size: 20px;
+  font-size: 16px;
   color: #556B2F;
 }
 
@@ -499,6 +499,13 @@ iframe {
   flex-wrap: wrap;
   gap: 20px;
   justify-content: center;
+}
+.form__message {
+  color: #d78707;
+  font-weight: 900;
+  position: absolute;
+  bottom: 10px;
+  left: 30%;
 }
 
 .services__row {

@@ -65,4 +65,13 @@
         gap: 20px;  
         justify-content: center;      
     }
+
+    &__message {
+        color: #d78707;
+        font-weight: 900;
+        position: absolute;
+        bottom: 10px;
+        left: 30%;
+
+    }
 }

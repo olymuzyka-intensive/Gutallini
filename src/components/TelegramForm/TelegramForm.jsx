@@ -1,6 +1,4 @@
 import React, { useRef, useState } from "react";
-import { servicesArray } from "../../constants/services.js";
-
 
 export const TelegramForm = ({ isOpen, onClose }) => {
   if (!isOpen) return null;
@@ -13,6 +11,8 @@ export const TelegramForm = ({ isOpen, onClose }) => {
 
   const [textArea, setTextArea] = useState("");
   const [selectedOption, setSelectedOption] = useState("");
+
+  const [textMessage, setTextMessage] = useState(false)
 
   const handleFileChange = (event) => {
     setPhotos([...event.target.files]);
@@ -37,6 +37,8 @@ export const TelegramForm = ({ isOpen, onClose }) => {
   const handleSubmit = async (event) => {
     event.preventDefault();
 
+    setTextMessage(true)
+
     const token = "7729156275:AAE2Nd1uYtkddV8W_bOtpZogGyEh_yfShT0";
     const chatId = "1010490009";
     const url = `https://api.telegram.org/bot${token}/sendMessage`;
@@ -49,8 +51,9 @@ export const TelegramForm = ({ isOpen, onClose }) => {
       body: JSON.stringify({
         chat_id: chatId,
         text: `Имя: ${textInputName}\nТелефон: ${textInputPhone}\nУслуга: ${selectedOption}\nКомментарий: ${textArea}`,
-      }),
-    });
+      })
+      
+    })   
 
     const data = new FormData();
     photos.forEach((photo) => {
@@ -70,10 +73,17 @@ export const TelegramForm = ({ isOpen, onClose }) => {
       });
       data.delete("photo"); // Удаляем предыдущую фотографию, чтобы избежать конфликта
     }
-    onClose();
+
+    setTimeout(() => {
+      setTextMessage(false);
+      onClose()
+    }, 5000);
+    
   };
 
+
   return (
+    <>
     <form className="form" ref={form} onSubmit={handleSubmit} id="form">
       <div onClick={onClose} className="form__close">
         <svg
@@ -187,9 +197,15 @@ export const TelegramForm = ({ isOpen, onClose }) => {
         required
         onChange={handleFileChange}
       />
+
+
       <button className="btn btn--send_foto" type="submit">
         Отправить
       </button>
+      {textMessage && <div className="form__message">Заявка принята</div>}
+
     </form>
+
+</>
   );
 };

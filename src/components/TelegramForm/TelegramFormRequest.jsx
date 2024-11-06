@@ -16,6 +16,8 @@ export const TelegramFormRequest = ({ isOpen, onClose }) => {
   const [time, setTime] = useState("");
   const [timeTo, setTimeTo] = useState("");
 
+  const [textMessage, setTextMessage] = useState(false)
+
   const handleFileChange = (event) => {
     setPhotos([...event.target.files]);
   };
@@ -50,6 +52,8 @@ export const TelegramFormRequest = ({ isOpen, onClose }) => {
   const handleSubmit = async (event) => {
     event.preventDefault();
 
+    setTextMessage(true)
+
     const token = "7729156275:AAE2Nd1uYtkddV8W_bOtpZogGyEh_yfShT0";
     const chatId = "1010490009";
     const url = `https://api.telegram.org/bot${token}/sendMessage`;
@@ -83,7 +87,11 @@ export const TelegramFormRequest = ({ isOpen, onClose }) => {
       });
       data.delete("photo"); // Удаляем предыдущую фотографию, чтобы избежать конфликта
     }
-    onClose();
+
+    setTimeout(() => {
+      setTextMessage(false);
+      onClose()
+    }, 5000);
   };
 
   return (
@@ -208,9 +216,12 @@ export const TelegramFormRequest = ({ isOpen, onClose }) => {
         <input type="time" id="time" name="time" onChange={handleSelectTime} />
         <input type="time" id="timeTo" name="timeTo" onChange={handleSelectTimeTo} />
       </div>
+
       <button className="btn btn--send_foto" type="submit">
         Отправить
       </button>
+      {textMessage && <div className="form__message">Заявка принята</div>}
+
     </form>
   );
 };
