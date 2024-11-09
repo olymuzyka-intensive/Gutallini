@@ -4,46 +4,47 @@
   border: 1px solid transparent;
   border-radius: 10px;
   text-align: center;
-  font-size: 1.25rem;//20px;
+  font-size: 1.25rem; //20px;
   cursor: pointer;
-  &--submit, &--call {
+  &--submit,
+  &--call {
     color: $white;
-    font-weight: 700;
-    background-color: $orange;
+    background-color: $minor;
     &:hover {
       // background: transparent;
       // border-color: gray;
-      // font-weight: 800;    
+      // font-weight: 800;
       // color: #d78707;
       -webkit-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
       -moz-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
       box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
-    }    
+    }
   }
-  
+
   &--send {
-    // border-color: $dark-gray;
+    border: 1px;
+    border-color: $dark-gray;
     box-shadow: 1px 1px 1px 1px rgba(34, 60, 80, 0.2);
     &:hover {
       -webkit-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
       -moz-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
-      box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2); 
+      box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
     }
     &_foto {
-      margin: 15px auto;
+      margin: 0 auto;
       border-color: $gray;
+      font-family: inherit;
     }
   }
 
   &--send-promo {
     color: $white;
-    font-weight: 700;
-    background-color: $orange;
+    // font-weight: 700;
+    background-color: $main;
     &:hover {
       -webkit-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
       -moz-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
       box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
-    
     }
   }
 
@@ -60,7 +61,7 @@
     height: 30px;
     color: $white;
     font-weight: 700;
-    border: 1px solid $orange;
-    background-color: transparent;  
+    border: 1px solid $minor;
+    background-color: transparent;
   }
 }

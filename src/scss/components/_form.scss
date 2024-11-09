@@ -1,11 +1,13 @@
 .form {
   z-index: 1000;
   position: fixed;
-  top: 20%;
-  right: 40%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: 380px;
-  margin: 0 auto;
+  // margin: 0 auto;
   padding: 20px;
+  padding-bottom: 40px;
   border-radius: 10px;
   background-color: #f6f8f8;
   display: flex;
@@ -17,20 +19,55 @@
     margin-bottom: 10px;
     color: $main;
   }
+
   &__subtitle {
     font-size: 1.25rem; //20px;
     font-weight: 600;
     margin: 10px 0;
     color: $main;
   }
+
   &__description {
     font-size: 0.875rem; //14px;
     color: $gray;
   }
+
+  &__upload input {
+    // display: none;
+    // visibility: hidden;
+    padding: 0 0 10px;
+  }
+
+  &__upload-file::-webkit-file-upload-button {
+    color: white;
+    // display: inline-block;
+    background: $main;
+    border: none;
+    padding: 8px 15px;
+    margin-right: 10px;
+    font-weight: 600;
+    border-radius: 8px;
+    white-space: nowrap;
+    cursor: pointer;
+    font-size: 14px;
+    font-family: Oswald, sans-serif;
+
+    // display: flex;
+    // flex-direction: row;
+    // gap: 25px;
+    // align-items: center;
+    // justify-content: center;
+    // margin-bottom: 10px;
+    // img {
+    // width: 50px;
+    // }
+  }
+
   input {
     outline: none;
     padding: 10px;
     margin: 10px 0;
+    font-family: Oswald, sans-serif;
   }
 
   input[type="date"] {
@@ -41,20 +78,27 @@
     padding: 5px;
     margin: 10px 0;
     outline: none;
+    font-family: Oswald, sans-serif;
   }
+
   textarea {
     max-width: 340px;
     min-height: 100px;
     margin-bottom: 10px;
     padding: 10px;
+    outline: none;
   }
+
   &__close {
     position: absolute;
     right: 20px;
-    color: $orange;
+    color: $minor;
     width: 24px;
     height: 24px;
     cursor: pointer;
+    svg path {
+      stroke: $main;
+    }
   }
 
   &__communicate {
@@ -65,7 +109,7 @@
   }
 
   &__message {
-    color: $orange;
+    color: $minor;
     font-weight: 900;
     position: absolute;
     bottom: 10px;

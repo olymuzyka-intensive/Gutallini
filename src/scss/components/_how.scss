@@ -1,72 +1,86 @@
 .how {
-    &__row {
-        padding: 85px 0;
-        &-items {
-            display: flex;
-            gap: 40px;
-            
-        }
-        &-free {
-            width: 80px;
-            position: absolute;
-            top: -10px;
-            right: 0px;
-            rotate: 10deg;
-        
-        }
-
-        &-item {
-            border: 1px solid $orange;
-            border-radius: 15px;
-            margin-top: 30px;
-            padding: 15px;
-            max-width: 33%;
-            position: relative;
-            &_title {
-                font-size: 1.625rem;//26px;
-                margin-bottom: 20px;
-                display: flex;
-                gap: 20px;
-                span {
-                    width: 25px;
-                }
-            }
-
-            &_text {
-                font-size: 1.125rem; 
-                span {
-                color:  $orange;  
-                }                        
-            }
-            &--address {
-                position: absolute;
-                left: 10%;
-                width: 300px;
-                z-index: 99;
-                top: 150px;
-                background: $white;
-            }
-        }
+  &__row {
+    padding: 85px 0;
+    &-items {
+      display: flex;
+      gap: 40px;
     }
+
+    &-free {
+      width: 80px;
+      position: absolute;
+      top: -10px;
+      right: 0px;
+      rotate: 10deg;
+    }
+
+    &-info {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      width: 50%;
+      gap: 20px;
+    }
+
+    &-item {
+      border: 1px solid $minor;
+      border-radius: 15px;
+      padding: 15px;
+      max-width: 33%;
+      position: relative;
+      &_title {
+        font-size: 1.625rem; //26px;
+        margin-bottom: 20px;
+        display: flex;
+        gap: 20px;
+        span {
+          width: 25px;
+        }
+      }
+
+      &_text {
+        font-size: 1.125rem;
+        span {
+          color: $minor;
+        }
+      }
+      &--services {
+        width: 65%;
+        border: 1px solid $minor;
+        border-radius: 15px;
+        padding: 15px;
+      }
+      &--address {
+        flex-grow: 1;
+        border: 1px solid $minor;
+        border-radius: 15px;
+        padding: 15px;
+        position: absolute;
+        top: 85%;
+        left: 30%;
+        background: $white;
+      }
+    }
+  }
 }
 
 .feedback {
-    margin: 40px 0;
-    display: flex;
-    gap: 50px;
-    justify-content: center;
+  margin: 40px 0;
+  display: flex;
+  gap: 50px;
+  justify-content: center;
 }
 
 .visit {
-    display: flex;
-    gap: 50px;
-    align-items: flex-start;
-    position: relative;
+  display: flex;
+  gap: 50px;
+  // align-items: flex-start;
+  position: relative;
 }
 
 iframe {
-    border-radius: 15px;
-    border: 1px solid  $orange;
-    position: absolute;
-    top: 30px;
+  border-radius: 15px;
+  border: 1px solid $minor;
+  position: absolute;
+  // top: 30px;
 }
