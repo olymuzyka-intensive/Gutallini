@@ -1,7 +1,27 @@
-// .visit > 
-
-.how__row-items {
+.how__row-item {
+  svg:nth-child(1) path {
+    fill: $minor;
+  }
+  &--services {
     svg path {
-        fill: $minor;
-    } 
-} 
+      fill: $minor;
+    }
+  }
+  &--address {
+    svg path {
+      fill: $minor;
+    }
+  }
+}
+
+.promo__row svg {
+  path {
+    fill: $minor;
+  }
+}
+
+.how__row-free {
+  path:nth-child(1) {
+    fill: $minor;
+  }
+}

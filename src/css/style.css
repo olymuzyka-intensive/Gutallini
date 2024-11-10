@@ -18,7 +18,7 @@ body {
   font-family: Oswald, sans-serif;
   font-weight: 400;
   font-size: 16px;
-  color: #556B2F;
+  color: #556b2f;
 }
 
 ul {
@@ -28,7 +28,7 @@ ul {
 a {
   text-decoration: none;
   font-size: 1.25rem;
-  color: #556B2F;
+  color: #556b2f;
 }
 
 .container {
@@ -72,10 +72,7 @@ h3 {
   animation-direction: alternate;
   animation-timing-function: ease-in-out;
   z-index: 150;
-}
-
-span svg {
-  fiil: #2c2a28;
+  cursor: pointer;
 }
 
 @keyframes call {
@@ -84,13 +81,26 @@ span svg {
     height: 50px;
   }
   to {
-    width: 70px;
-    height: 70px;
-    rotate: 25deg;
+    width: 60px;
+    height: 60px;
   }
 }
-.how__row-items svg path {
-  fill: #7a3819;
+.how__row-item svg:nth-child(1) path {
+  fill: #AD343E;
+}
+.how__row-item--services svg path {
+  fill: #AD343E;
+}
+.how__row-item--address svg path {
+  fill: #AD343E;
+}
+
+.promo__row svg path {
+  fill: #AD343E;
+}
+
+.how__row-free path:nth-child(1) {
+  fill: #AD343E;
 }
 
 .header {
@@ -283,7 +293,7 @@ span svg {
 }
 .btn--submit, .btn--call {
   color: #ffffff;
-  background-color: #7a3819;
+  background-color: #AD343E;
 }
 .btn--submit:hover, .btn--call:hover {
   -webkit-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
@@ -307,7 +317,7 @@ span svg {
 }
 .btn--send-promo {
   color: #ffffff;
-  background-color: #556B2F;
+  background-color: #AD343E;
 }
 .btn--send-promo:hover {
   -webkit-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
@@ -325,8 +335,11 @@ span svg {
   height: 30px;
   color: #ffffff;
   font-weight: 700;
-  border: 1px solid #7a3819;
+  border: 1px solid #AD343E;
   background-color: transparent;
+}
+.btn--switch svg path {
+  fill: #AD343E;
 }
 
 .how__row {
@@ -351,7 +364,7 @@ span svg {
   gap: 20px;
 }
 .how__row-item {
-  border: 1px solid #7a3819;
+  border: 1px solid #AD343E;
   border-radius: 15px;
   padding: 15px;
   max-width: 33%;
@@ -370,17 +383,17 @@ span svg {
   font-size: 1.125rem;
 }
 .how__row-item_text span {
-  color: #7a3819;
+  color: #AD343E;
 }
 .how__row-item--services {
   width: 65%;
-  border: 1px solid #7a3819;
+  border: 1px solid #AD343E;
   border-radius: 15px;
   padding: 15px;
 }
 .how__row-item--address {
   flex-grow: 1;
-  border: 1px solid #7a3819;
+  border: 1px solid #AD343E;
   border-radius: 15px;
   padding: 15px;
   position: absolute;
@@ -404,7 +417,7 @@ span svg {
 
 iframe {
   border-radius: 15px;
-  border: 1px solid #7a3819;
+  border: 1px solid #AD343E;
   position: absolute;
 }
 
@@ -485,13 +498,13 @@ iframe {
   font-weight: 700;
   text-align: center;
   margin-bottom: 10px;
-  color: #556B2F;
+  color: #556b2f;
 }
 .form__subtitle {
   font-size: 1.25rem;
   font-weight: 600;
   margin: 10px 0;
-  color: #556B2F;
+  color: #556b2f;
 }
 .form__description {
   font-size: 0.875rem;
@@ -502,7 +515,7 @@ iframe {
 }
 .form__upload-file::-webkit-file-upload-button {
   color: white;
-  background: #556B2F;
+  background: #556b2f;
   border: none;
   padding: 8px 15px;
   margin-right: 10px;
@@ -538,13 +551,13 @@ iframe {
 .form__close {
   position: absolute;
   right: 20px;
-  color: #7a3819;
+  color: #AD343E;
   width: 24px;
   height: 24px;
   cursor: pointer;
 }
 .form__close svg path {
-  stroke: #556B2F;
+  stroke: #556b2f;
 }
 .form__communicate {
   display: flex;
@@ -553,7 +566,7 @@ iframe {
   justify-content: center;
 }
 .form__message {
-  color: #7a3819;
+  color: #AD343E;
   font-weight: 900;
   position: absolute;
   bottom: 10px;
@@ -671,7 +684,7 @@ iframe {
   font-weight: 500;
   display: flex;
   justify-content: space-between;
-  border-bottom: 1px solid #7a3819;
+  border-bottom: 1px solid #AD343E;
   padding-bottom: 10px;
   cursor: pointer;
 }
