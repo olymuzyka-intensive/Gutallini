@@ -80,7 +80,7 @@ export const TelegramForm = ({ isOpen, onClose }) => {
   };
 
   return (
-    <>
+    <div className="popup-overlay">
       <form className="form" ref={form} onSubmit={handleSubmit} id="form">
         <div onClick={onClose} className="form__close">
           <svg
@@ -195,10 +195,6 @@ export const TelegramForm = ({ isOpen, onClose }) => {
             required
             onChange={handleFileChange}
           />
-          {/* <label className="form__upload-file" htmlFor="files"> Прикрепить файлы
-          <img src="/public/img/icons/upload.svg" alt="upload" /> 
-          <span class="form__upload-text">Прикрепить файлы</span>
-          </label> */}
         </div>
 
         <button className="btn btn--send_foto" type="submit">
@@ -206,6 +202,6 @@ export const TelegramForm = ({ isOpen, onClose }) => {
         </button>
         {textMessage && <div className="form__message">Заявка принята</div>}
       </form>
-    </>
+    </div>
   );
 };

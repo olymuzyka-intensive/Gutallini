@@ -22,8 +22,8 @@
   }
 
   &--send {
-    border: 1px;
-    border-color: $dark-gray;
+    color: $white;
+    background-color: $major;
     box-shadow: 1px 1px 1px 1px rgba(34, 60, 80, 0.2);
     &:hover {
       -webkit-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
@@ -32,15 +32,19 @@
     }
     &_foto {
       margin: 0 auto;
-      border-color: $gray;
       font-family: inherit;
+      color: $minor;
+    background-color: $white;
+    border: 0.1px solid $minor;
+    width: 100%;
+
     }
   }
 
   &--send-promo {
     color: $white;
     // font-weight: 700;
-    background-color: $minor;
+    background-color: $major;
     &:hover {
       -webkit-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
       -moz-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);

@@ -1,6 +1,9 @@
 .services {
-  // background: url('/img/top-bg-2.jpg') center no-repeat;
+  // background: url('/img/gradient.png') center no-repeat;
   // background-size: 100% 100%;
+  // background: -webkit-linear-gradient(65deg, #835d6c,#d99b3f,#8e486a);/* Chrome 10-25, Safari 5.1-6 */                          
+  // background: linear-gradient(65deg, #835d6c,#d99b3f,#8e486a);/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */                                             
+ background: $light-gray;
   &__row {
     margin-top: 100px;
 
@@ -9,7 +12,7 @@
     flex-direction: column;
     position: relative;
     &--page {
-      padding: 15px 0;
+      padding: 15px 0 55px;
     }
 
     &-section {
@@ -49,24 +52,27 @@
 
     &-type {
       // font-weight: 600;
-      margin: 5px 0 5px;
+      margin: 5px 0;
       min-height: 60px;
       font-size: 1.25rem;
       &--desc {
         text-transform: uppercase;
         font-weight: 900;
         margin: 20px 0 10px;
+        span {
+          margin-right: 20px;
+        }
       }
     }
 
-    &-info {
-      display: flex;
-      justify-content: space-between;
+    &-info { 
+      display: flex; 
+      justify-content: space-between; 
       // margin-bottom: 10px;
       // font-size: 1.25rem;
-    }
+    } 
 
-    &-content {
+    &-content { 
       display: flex;
       flex-direction: column;
       justify-content: space-evenly;

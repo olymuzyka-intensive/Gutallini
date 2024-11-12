@@ -16,7 +16,7 @@ export const TelegramFormRequest = ({ isOpen, onClose }) => {
   const [time, setTime] = useState("");
   const [timeTo, setTimeTo] = useState("");
 
-  const [textMessage, setTextMessage] = useState(false)
+  const [textMessage, setTextMessage] = useState(false);
 
   const handleFileChange = (event) => {
     setPhotos([...event.target.files]);
@@ -52,7 +52,7 @@ export const TelegramFormRequest = ({ isOpen, onClose }) => {
   const handleSubmit = async (event) => {
     event.preventDefault();
 
-    setTextMessage(true)
+    setTextMessage(true);
 
     const token = "7729156275:AAE2Nd1uYtkddV8W_bOtpZogGyEh_yfShT0";
     const chatId = "1010490009";
@@ -90,12 +90,18 @@ export const TelegramFormRequest = ({ isOpen, onClose }) => {
 
     setTimeout(() => {
       setTextMessage(false);
-      onClose()
+      onClose();
     }, 5000);
   };
 
   return (
-    <form className="form" ref={form} onSubmit={handleSubmit} id="form">
+    <div className="popup-overlay">
+    <form
+      className="form__request"
+      ref={form}
+      onSubmit={handleSubmit}
+      id="form"
+    >
       <div onClick={onClose} className="form__close">
         <svg
           width="30px"
@@ -127,101 +133,131 @@ export const TelegramFormRequest = ({ isOpen, onClose }) => {
           </g>
         </svg>
       </div>
-      <p className="form__title">Оставить заявку</p>
-      <input
-        type="name"
-        name="name"
-        id="name"
-        maxLength="50"
-        placeholder="Ваше имя"
-        required
-        value={textInputName}
-        onChange={handleInputChangeName}
-      />
-      <input
-        type="tel"
-        name="tel"
-        id="tel"
-        placeholder="Ваш номер телефона"
-        pattern="^\+375\s?\(?(29|25|44|33|17)\)?\s?\d{3}-?\d{2}-?\d{2}$"
-        required
-        value={textInputPhone}
-        onChange={handleInputChangePhone}
-      />
-      <div className="form__subtitle">Какая услуга Вам необходима?</div>
-      <label className="form__description" htmlFor="option">
-        Выберите вариант из представленного списка
-      </label>
-      <select
-        name="option-services"
-        id="option"
-        value={selectedOption}
-        onChange={handleSelectChange}
-        required
-      >
-        <option value="" disabled></option>
-        <option value="Полный уход с обновлением цвета">
-          Полный уход с обновлением цвета
-        </option>
-        <option value="Покраска подошвы">Покраска подошвы</option>
-        <option value="Замша. Покраска в родной цвет">
-          Замша. Покраска в родной цвет
-        </option>
-        <option value="Чистка и обновление обуви из замши">
-          Чистка и обновление обуви из замши
-        </option>
-        <option value="Чистка и обновление обуви из кожи">
-          Чистка и обновление обуви из кожи
-        </option>
-        <option value="Реставрация, устранение порезов, царапин, трещин">
-          Реставрация, устранение порезов, царапин, трещин
-        </option>
-        <option value="Текстиль. Полный уход">Текстиль. Полный уход</option>
-        <option value="Нубук. Полный уход">Нубук. Полный уход</option>
-        <option value="Выведение реагентов">Выведение реагентов</option>
-        <option value="Восстановление сумок">Восстановление сумок</option>
-        <option value="Полный уход комбинированные материалы">
-          Полный уход комбинированные материалы
-        </option>
-        <option value="Патинирование">Патинирование</option>
-      </select>
-      <label className="form__subtitle" htmlFor="comments">
-        Комментарии
-      </label>
-      <textarea
-        value={textArea}
-        onChange={handleTextAreaChange}
-        name="comments"
-        id="comments"
-        placeholder="Опишите пожалуйста вашу проблему"
-      ></textarea>
-      <label className="form__subtitle" htmlFor="files">
-        Вы можете загрузить фото
-      </label>
-      <input
-        type="file"
-        id="files"
-        accept="image/*"
-        multiple
-        onChange={handleFileChange}
-      />
 
-      <div className="form__subtitle">Мы с Вами свяжемся</div>
-      <label className="form__description" htmlFor="date">
-        Выберите день и удобное время
-      </label>
-      
-      <div className="form__communicate">
-        <input type="date" id="date" name="date" onChange={handleSelectDate} /> 
-        <input type="time" id="time" name="time" onChange={handleSelectTime} />
-        <input type="time" id="timeTo" name="timeTo" onChange={handleSelectTimeTo} />
+      <div className="form__section-left">
+      <p className="form__title">Оставить заявку</p>
+
+        <input
+          type="name"
+          name="name"
+          id="name"
+          maxLength="50"
+          placeholder="Ваше имя"
+          required
+          value={textInputName}
+          onChange={handleInputChangeName}
+        />
+        <input
+          type="tel"
+          name="tel"
+          id="tel"
+          placeholder="Ваш номер телефона"
+          pattern="^\+375\s?\(?(29|25|44|33|17)\)?\s?\d{3}-?\d{2}-?\d{2}$"
+          required
+          value={textInputPhone}
+          onChange={handleInputChangePhone}
+        />
+
+<div className="form__subtitle">Мы с Вами свяжемся</div>
+
+<label className="form__description" htmlFor="date">
+  Вы можете выбрать удобное время для связи
+</label>
+<div className="form__communicate">
+  <input
+    type="date"
+    id="date"
+    name="date"
+    onChange={handleSelectDate}
+  />
+  <input
+    type="time"
+    id="time"
+    name="time"
+    onChange={handleSelectTime}
+  />
+  <input
+    type="time"
+    id="timeTo"
+    name="timeTo"
+    onChange={handleSelectTimeTo}
+  />
+</div>
+        
       </div>
 
-      <button className="btn btn--send_foto" type="submit">
+      <div className="form__section-right">
+      <div className="form__subtitle">Какая услуга Вам необходима?</div>
+        <label className="form__description" htmlFor="option">
+          Выберите вариант из представленного списка
+        </label>
+        <select
+          name="option-services"
+          id="option"
+          value={selectedOption}
+          onChange={handleSelectChange}
+          required
+        >
+          <option value="" disabled></option>
+          <option value="Полный уход с обновлением цвета">
+            Полный уход с обновлением цвета
+          </option>
+          <option value="Покраска подошвы">Покраска подошвы</option>
+          <option value="Замша. Покраска в родной цвет">
+            Замша. Покраска в родной цвет
+          </option>
+          <option value="Чистка и обновление обуви из замши">
+            Чистка и обновление обуви из замши
+          </option>
+          <option value="Чистка и обновление обуви из кожи">
+            Чистка и обновление обуви из кожи
+          </option>
+          <option value="Реставрация, устранение порезов, царапин, трещин">
+            Реставрация, устранение порезов, царапин, трещин
+          </option>
+          <option value="Текстиль. Полный уход">Текстиль. Полный уход</option>
+          <option value="Нубук. Полный уход">Нубук. Полный уход</option>
+          <option value="Выведение реагентов">Выведение реагентов</option>
+          <option value="Восстановление сумок">Восстановление сумок</option>
+          <option value="Полный уход комбинированные материалы">
+            Полный уход комбинированные материалы
+          </option>
+          <option value="Патинирование">Патинирование</option>
+        </select>
+        <label className="form__subtitle" htmlFor="comments">
+          Комментарии
+        </label>
+        <br/>
+        <textarea
+          value={textArea}
+          onChange={handleTextAreaChange}
+          name="comments"
+          id="comments"
+          placeholder="Опишите пожалуйста вашу проблему"
+        ></textarea>
+
+        <div className="form__upload">
+          <div className="form__subtitle" htmlFor="files">
+            Вы можете загрузить фото
+          </div>
+          <input
+            type="file"
+            className="form__upload-file"
+            id="files"
+            accept="image/*"
+            multiple
+            required
+            onChange={handleFileChange}
+          />
+        </div>
+        <button className="btn btn--send_foto" type="submit">
         Отправить
       </button>
       {textMessage && <div className="form__message">Заявка принята</div>}
+      </div>
 
+      
     </form>
+    </div>
   );
 };

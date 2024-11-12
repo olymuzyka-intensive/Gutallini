@@ -1,27 +1,33 @@
 .how__row-item {
   svg:nth-child(1) path {
-    fill: $minor;
+    fill: $minor; 
   }
-  &--services {
-    svg path {
+  &--services { 
+    svg path { 
       fill: $minor;
-    }
-  }
-  &--address {
-    svg path {
-      fill: $minor;
-    }
-  }
+    } 
+  } 
+  &--address { 
+    svg path { 
+      fill: $minor;  
+    }   
+  } 
 }
 
 .promo__row svg {
   path {
+    fill: $major;
+  }
+}
+
+.how__row-free { 
+  path:nth-child(1) { 
     fill: $minor;
   }
 }
 
-.how__row-free {
-  path:nth-child(1) {
-    fill: $minor;
-  }
-}
+.send__row svg {
+  path {
+    fill: $major;
+  } 
+} 

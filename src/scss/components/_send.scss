@@ -21,10 +21,11 @@
         justify-content: space-between; 
         padding: 20px;     
         color: $white;  
- 
-        // margin-top: 15%; 
-        svg { 
-            display: none; 
-        }    
-    } 
-} 
+        
+    .send__row-icon {
+        display: none; 
+    }     
+    }   
+    
+}    
+

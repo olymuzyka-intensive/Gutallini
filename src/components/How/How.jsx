@@ -88,4 +88,3 @@ export const How = () => {
 };
 
 
-// how__row-item--address

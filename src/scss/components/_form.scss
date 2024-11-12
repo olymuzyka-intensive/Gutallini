@@ -1,4 +1,17 @@
-.form {
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #f6f4f29f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100; 
+}
+
+.form { 
   z-index: 1000;
   position: fixed;
   top: 50%;
@@ -12,8 +25,9 @@
   background-color: #f6f8f8;
   display: flex;
   flex-direction: column;
+  box-shadow: 0px 1px 1px 1px rgba(34, 60, 80, 0.2);
   &__title {
-    font-size: 1.5628rem; //25px;
+    font-size: 1.5625rem; //25px;
     font-weight: 700;
     text-align: center;
     margin-bottom: 10px;
@@ -29,38 +43,8 @@
 
   &__description {
     font-size: 0.875rem; //14px;
-    color: $gray;
-  }
-
-  &__upload input {
-    // display: none;
-    // visibility: hidden;
-    padding: 0 0 10px;
-  }
-
-  &__upload-file::-webkit-file-upload-button {
-    color: white;
-    // display: inline-block;
-    background: $main;
-    border: none;
-    padding: 8px 15px;
-    margin-right: 10px;
-    font-weight: 600;
-    border-radius: 8px;
-    white-space: nowrap;
-    cursor: pointer;
-    font-size: 14px;
-    font-family: Oswald, sans-serif;
-
-    // display: flex;
-    // flex-direction: row;
-    // gap: 25px;
-    // align-items: center;
-    // justify-content: center;
-    // margin-bottom: 10px;
-    // img {
-    // width: 50px;
-    // }
+    color: $minor;
+    opacity: 0.7;
   }
 
   input {
@@ -70,8 +54,32 @@
     font-family: Oswald, sans-serif;
   }
 
-  input[type="date"] {
-    width: 100%;
+  &__upload input[type="file"] {
+    padding: 0;
+    margin-bottom: 20px;
+    margin-top: 0;
+  }
+
+  &__upload-file::-webkit-file-upload-button {
+    color: $white;
+    background: $minor;
+    border: 1px solid $minor;
+    padding: 8px 15px;
+    margin-right: 10px;
+    font-weight: 600;
+    border-radius: 8px;
+    white-space: nowrap;
+    cursor: pointer;
+    font-size: 14px;
+    font-family: Oswald, sans-serif;
+  }
+
+  input[type="name"],
+  input[type="tel"],
+  select,
+  textarea {
+    border: 0.2px solid $minor;
+    border-radius: 8px;
   }
 
   select {
@@ -83,36 +91,168 @@
 
   textarea {
     max-width: 340px;
-    min-height: 100px;
-    margin-bottom: 10px;
+    // min-height: 100px;
+    // margin-bottom: 10px;
     padding: 10px;
     outline: none;
+    font-family: inherit;
   }
 
   &__close {
     position: absolute;
     right: 20px;
-    color: $minor;
+    // color: $minor;
     width: 24px;
     height: 24px;
     cursor: pointer;
     svg path {
-      stroke: $main;
+      stroke: $minor;
+      fill: none;
     }
   }
 
   &__communicate {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
+    justify-content: space-around;
   }
 
   &__message {
-    color: $minor;
+    color: $major;
     font-weight: 900;
     position: absolute;
     bottom: 10px;
     left: 30%;
+  }
+}
+
+.form__request {
+  display: flex;
+  flex-direction: row;
+  z-index: 1000;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 700px;
+  gap: 40px;
+  padding: 20px;
+  padding-bottom: 40px;
+  border-radius: 10px;
+  background-color: #f6f8f8;
+  box-shadow: 0px 1px 1px 1px rgba(34, 60, 80, 0.2);
+  &__title {
+    font-size: 1.5625rem; //25px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 10px;
+    color: $main;
+  }
+
+  &__subtitle {
+    font-size: 1.25rem; //20px;
+    font-weight: 600;
+    margin: 10px 0;
+    color: $main;
+  }
+
+  &__description {
+    font-size: 0.875rem; //14px;
+    color: $minor;
+    opacity: 0.7;
+
+  }
+
+  input {
+    outline: none;
+    padding: 10px;
+    margin: 10px 0;
+    font-family: Oswald, sans-serif;
+    width: 310px;
+  }
+
+  &__upload input[type="file"] {
+    padding: 0;
+    margin-bottom: 20px;
+    margin-top: 0;
+  }
+
+  &__upload-file::-webkit-file-upload-button {
+    color: $white;
+    background: $minor;
+    border: 1px solid $minor;
+    padding: 8px 15px;
+    margin-right: 10px;
+    font-weight: 600;
+    border-radius: 8px;
+    white-space: nowrap;
+    cursor: pointer;
+    font-size: 14px;
+    font-family: Oswald, sans-serif;
+  }
+
+  input[type="name"],
+  input[type="tel"],
+  select,
+  textarea {
+    border: 0.2px solid $minor;
+    border-radius: 8px;
+  }
+
+  input[type="date"] {
+    width: 100%;
+    border: 0.2px solid $minor;
+    border-radius: 8px;
+  }
+
+  input[type="time"] {
+    width: 40%;
+    border: 0.2px solid $minor;
+    border-radius: 8px;
+  }
+
+  select {
+    padding: 5px;
+    margin: 10px 0;
+    outline: none;
+    font-family: Oswald, sans-serif;
+    width: 310px;
+  }
+
+  textarea {
+    width: 310px;
+    // min-height: 100px;
+    // margin-bottom: 10px;
+    padding: 10px;
+    outline: none;
+    margin-top: 10px;
+    font-family: inherit;
+  }
+
+  &__close {
+    position: absolute;
+    right: 20px;
+    // color: $minor;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    svg path {
+      stroke: $minor;
+      fill: none;
+    }
+  }
+
+  &__communicate {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  &__message {
+    color: $major;
+    font-weight: 900;
+    position: absolute;
+    bottom: 10px;
+    left: 40%;
   }
 }
