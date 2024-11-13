@@ -1,5 +1,5 @@
 import Links from "../Links/Links";
-import { Send } from "../Send/Send";
+// import { Send } from "../Send/Send";
 
 export const Promo = () => {
   return (
