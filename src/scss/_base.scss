@@ -21,12 +21,9 @@ body {
   font-family: Oswald, sans-serif;
   // font-family: Finlandica, sans-serif;
   // font-family: 'Mulish', Arial, sans-serif;
-
   font-weight: 400;
-  font-size: 16px;
+  font-size: 18px;
   color: $main;
-  // line-height: 130%;       
-
 }
 
 ul {
@@ -50,10 +47,7 @@ h1 {
   // font-family: "Prata", serif;
   font-size: 5rem; //80px
   line-height: 130%;       
-
-  text-transform: uppercase;
-  // font-weight: 700;
-  
+  text-transform: uppercase;  
   width: 70%;
   text-align: center;
   color: $white;  
@@ -71,7 +65,6 @@ h2 {
 h3 {
   font-family: Finlandica, sans-serif;
   // font-family: 'Gallinari';
-
   font-weight: 600;
   font-size: 2rem; //32px;
   text-transform: uppercase;
@@ -105,19 +98,18 @@ h3 {
   z-index: 100;
   padding:  10px 20px;
   &__item {
-    align-items: center
-    ;
+    align-items: center;
   }
 }
 
-// @keyframes call {
-//   from {
-//     width: 50px;
-//     height: 50px;
-//   }
-//   to {
-//     width: 60px;
-//     height: 60px;
-//     // rotate: 25deg;
-//   }
-// }
+@keyframes call {
+  from {
+    width: 50px;
+    height: 50px;
+  }
+  to {
+    width: 60px;
+    height: 60px;
+    rotate: -25deg;
+  }
+}

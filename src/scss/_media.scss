@@ -1,17 +1,25 @@
-// @media (max-width: 2560px) {
-//   // .container {
-//   //     width: 1440px;
-//   // }
+@media (min-width: 1440px) {
 
-//   // .promo__row {
-//   //     padding: 142px 0;
-//   // }
+}
 
-//   .services__row-section {
-//     grid-template-columns: auto auto auto auto;
-//   }
+@media (min-width: 1600px) {
+    html {
+        // font-size: 19px; 
+    }
+  .container {
+      width: 1280px;
+      max-width: 90%;
+  } 
 
-//   iframe {
-//     width: 670px;
-//   }
-// }
+  .promo__row { 
+      padding: 150px 0; 
+  } 
+
+  .services__row-section { 
+    grid-template-columns: auto auto auto auto; 
+  } 
+
+  iframe { 
+    width: 590px; 
+  }  
+}   
