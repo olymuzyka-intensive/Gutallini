@@ -1,6 +1,7 @@
 .about {
   background: url("/img/promo-bg.jpg") center no-repeat;
-  background-size: 100% 100%;
+  // background-size: 100% 100%;
+  background-size: cover;
   height: 100vh;
   &__row {
     display: flex;

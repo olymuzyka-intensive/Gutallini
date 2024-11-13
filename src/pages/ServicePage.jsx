@@ -8,6 +8,7 @@ import CompareImage from "react-compare-image";
 import { useParams } from "react-router-dom";
 import { TelegramFormRequest } from "../components/TelegramForm/TelegramFormRequest";
 import Links from "../components/Links/links";
+
 // import ScrollToTop from "../components/ScrollToTop";
 
 function ServicePage() {
@@ -57,6 +58,11 @@ function ServicePage() {
             </div>
 
             <Send isActive={true} />
+            <ul className="page__nav">
+              <li className="page__nav-item"><a href="#before-after">До/После</a></li>
+              <li className="page__nav-item"><a href="#stages">Этапы работы</a></li>
+              <li className="page__nav-item"><a href="#questions">Вопросы</a></li>
+            </ul>
           </div>
         </div>
       </section>
@@ -69,7 +75,7 @@ function ServicePage() {
         </div>
       </section>
 
-      <section className="services">
+      <section className="services" id="before-after">
         <div className="container">
           <div
             key={selectedObject.id}
@@ -123,7 +129,7 @@ function ServicePage() {
         </div>
       </section>
 
-      <section className="stages">
+      <section className="stages" id="stages">
         <div className="container">
           <h3 className="services__row-type--desc">
           <span>
@@ -155,7 +161,7 @@ function ServicePage() {
         </div>
       </section>
 
-      <section className="questions">
+      <section className="questions" id="questions">
         <div className="container">
           <h3 className="services__row-type--desc">
           <span>

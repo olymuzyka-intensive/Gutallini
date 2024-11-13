@@ -1,0 +1,17 @@
+@media (max-width: 2560px) {
+    .container {
+        width: 1440px;
+    }
+
+    // .promo__row {
+    //     padding: 142px 0;
+    // }
+
+    .services__row-section {
+        grid-template-columns: auto auto auto auto ;
+    }
+
+    iframe {
+        width: 670px;
+    }
+}

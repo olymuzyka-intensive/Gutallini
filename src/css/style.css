@@ -239,7 +239,7 @@ h3 {
 
 .promo {
   background: url("/img/feature-bg.jpg") center no-repeat;
-  background-size: 100% 100%;
+  background-size: cover;
 }
 .promo__row {
   display: flex;
@@ -439,7 +439,7 @@ iframe {
 
 .about {
   background: url("/img/promo-bg.jpg") center no-repeat;
-  background-size: 100% 100%;
+  background-size: cover;
   height: 100vh;
 }
 .about__row {
@@ -880,4 +880,16 @@ iframe {
 }
 .footer__row-title, .footer__row-text {
   color: #ffffff;
+}
+
+@media (max-width: 2560px) {
+  .container {
+    width: 1440px;
+  }
+  .services__row-section {
+    grid-template-columns: auto auto auto auto;
+  }
+  iframe {
+    width: 670px;
+  }
 }/*# sourceMappingURL=style.css.map */
