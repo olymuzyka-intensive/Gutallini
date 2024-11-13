@@ -7,7 +7,7 @@ import { Send } from "../components/Send/Send";
 import CompareImage from "react-compare-image";
 import { useParams } from "react-router-dom";
 import { TelegramFormRequest } from "../components/TelegramForm/TelegramFormRequest";
-import Links from "../components/Links/links";
+import Links from "../components/Links/Links";
 
 // import ScrollToTop from "../components/ScrollToTop";
 
