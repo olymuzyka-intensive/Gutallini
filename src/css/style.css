@@ -880,16 +880,4 @@ iframe {
 }
 .footer__row-title, .footer__row-text {
   color: #ffffff;
-}
-
-@media (max-width: 2560px) {
-  .container {
-    width: 1440px;
-  }
-  .services__row-section {
-    grid-template-columns: auto auto auto auto;
-  }
-  iframe {
-    width: 670px;
-  }
 }/*# sourceMappingURL=style.css.map */
