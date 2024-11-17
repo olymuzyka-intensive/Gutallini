@@ -7,7 +7,7 @@ import { Send } from "../components/Send/Send";
 import CompareImage from "react-compare-image";
 import { useParams } from "react-router-dom";
 import { TelegramFormRequest } from "../components/TelegramForm/TelegramFormRequest";
-import Links from "../components/Links/Links";
+// import Links from "../components/Links/Links";
 
 // import ScrollToTop from "../components/ScrollToTop";
 
@@ -38,7 +38,7 @@ function ServicePage() {
       <section className="promo">
         <div className="container">
           <div className="promo__row">
-            <Links />
+            {/* <Links /> */}
             <div className="promo__row-main">
               <h2 className="promo__row-title--service">
                 {selectedObject.service}

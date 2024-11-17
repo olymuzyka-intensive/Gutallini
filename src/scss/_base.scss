@@ -40,10 +40,10 @@ a {
   width: 1160px;
   margin: 0 auto;
 }
-// .container .promo__row  {
-//   position: relative;
+.container .header__nav  {
+  position: relative;
 
-// }
+}
 
 h1 {
   // font-family: Finlandica, sans-serif;
@@ -74,46 +74,3 @@ h3 {
   text-transform: uppercase;
 }
 
-.call {
-  width: 60px;
-  height: 60px;
-  position: fixed;
-  top: 12%;
-  right: 12%;
-  animation-name: call;
-  animation-duration: 2.5s;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-  animation-timing-function: ease-in-out;
-  z-index: 150;
-  cursor: pointer;
-}
-
-.social {
-  position: fixed;
-  top: 13%;
-  right: 10%;
-  display: flex;
-  flex-direction: row;
-  gap: 20px;
-  background-color: rgba(0, 0, 0, 0.5);
-  border: rgba(0, 0, 0, 0);
-  border-radius: 15px;
-  z-index: 100;
-  padding:  10px 20px;
-  &__item {
-    align-items: center;
-  }
-}
-
-@keyframes call {
-  from {
-    width: 50px;
-    height: 50px;
-  }
-  to {
-    width: 60px;
-    height: 60px;
-    rotate: -25deg;
-  }
-}

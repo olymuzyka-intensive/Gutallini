@@ -11,7 +11,7 @@ const Links = () => {
     <>
       <svg
         onClick={linkToggle}
-        className="call"
+        className="header__call"
         width="24"
         height="24"
         viewBox="0 0 24 24"

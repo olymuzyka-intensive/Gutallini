@@ -51,10 +51,11 @@
     }
 
     &-type {
-      // font-weight: 600;
+      font-weight: 600;
       margin: 5px 0;
-      min-height: 60px;
+      min-height: 40px;
       font-size: 1.25rem;
+      line-height: 110%;
       &--desc {
         text-transform: uppercase;
         font-weight: 900;

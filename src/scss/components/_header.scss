@@ -6,23 +6,33 @@
   z-index: 100;
   &__row {
     padding: 16px 0; //25
-  }
-  &__nav {
     display: flex;
-    gap: 50px;
     align-items: center;
-    justify-content: center;
-    &-logo img {
-      width: 30px;
-    }
+    position: relative;
+    justify-content: space-between;
+    height: 65px;
+  }
 
-    &-item a {
-      color: $white;
-      font-size: 1.375rem;
+  &__logo  {
+    margin-left: 0;
+  }
 
-    }
+  &__logo img {
+    width: 30px; 
+  }
 
-    &-item {
+  &__nav { 
+    display: flex; 
+    gap: 50px; 
+    align-items: center; 
+    justify-content: center; 
+
+    &-item a { 
+      color: $white; 
+      font-size: 1.375rem; 
+    } 
+
+    &-item { 
       position: relative;
       // border-top: 1px solid transparent;
       border-bottom: 1px solid transparent;
@@ -44,6 +54,7 @@
       background: none;
       position: absolute;
       right: 0px;
+      top: 8px;
       cursor: pointer;
       span {
         display: flex;
@@ -59,75 +70,123 @@
         width: 26px;
         height: 2px;
         background: white;
-        top: -8px; 
-      }  
-      span::after {  
-        content: ""; 
-        position: absolute; 
-        width: 13px; 
-        height: 2px; 
-        background: white; 
-        top: 8px; 
-      }  
-    }  
+        top: -8px;
+      }
+      span::after {
+        content: "";
+        position: absolute;
+        width: 13px;
+        height: 2px;
+        background: white;
+        top: 8px;
+      }
+    }
 
-    &-burger.open {  
-      display: flex; 
-      flex-direction: column; 
-      align-items: center; 
-      gap: 40px; 
-      span {  
-        rotate: -45deg; 
-      }  
-      span::before {  
-        rotate: 90deg; 
-        top: 30%; 
-      } 
-      span::after { 
-        opacity: 0; 
-      } 
-    } 
+    &-burger.open {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 40px;
+      span {
+        rotate: -45deg;
+      }
+      span::before {
+        rotate: 90deg;
+        top: 30%;
+      }
+      span::after {
+        opacity: 0;
+      }
+    }
 
-    &-burger:not(.open):hover span:nth-child(1) { 
-      transform: rotate(-3deg) scaleY(1.1); 
-    } 
+    &-burger:not(.open):hover span:nth-child(1) {
+      transform: rotate(-3deg) scaleY(1.1);
+    }
 
-    &-burger:not(.open):hover span:nth-child(2) { 
-      transform: rotate(3deg) scaleY(1.1); 
-    } 
+    &-burger:not(.open):hover span:nth-child(2) {
+      transform: rotate(3deg) scaleY(1.1);
+    }
 
-    &-burger:not(.open):hover span:nth-child(3) { 
-      transform: rotate(-3deg) scaleY(1.1); 
-    } 
-  } 
+    &-burger:not(.open):hover span:nth-child(3) {
+      transform: rotate(-3deg) scaleY(1.1);
+    }
+  }
 
-  &__nav.open { 
-    display: flex; 
-    flex-direction: column; 
-    justify-content: center; 
-    gap: 40px; 
-    width: 100%; 
-    height: 100%; 
-    background: #141024; 
-    position: fixed; 
-    right: -100%; 
-    top: 0; 
-    z-index: 9999; 
-    animation: anim 0.5s forwards; 
-    @keyframes anim { 
-      from { 
-        right: -100%; 
-      }  
-      to { 
-        right: 0; 
-      }  
-    }  
-  }  
+  &__nav.open {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 40px;
+    width: 100%;
+    height: 100%;
+    // background: #141024;
+    background: $minor;
 
-  &__nav .open a {  
-    font-weight: 600; 
-    font-size: 1.875rem;//30px; 
-    line-height: 48px; 
-    color: $white; 
-  }  
-}  
+    position: fixed;
+    right: -100%;
+    top: 0;
+    z-index: 9999;
+    animation: anim 0.5s forwards;
+    @keyframes anim {
+      from {
+        right: -100%;
+      }
+      to {
+        right: 0;
+      }
+    }
+  }
+
+  &__nav .open a {
+    font-weight: 600;
+    font-size: 1.875rem; //30px;
+    line-height: 48px;
+    color: $white;
+  }
+
+  &__call {
+    width: 60px;
+    height: 60px;
+    position: fixed;
+    top: 90px;
+    right: 30px;
+    animation-name: call;
+    animation-duration: 2.5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+    z-index: 150;
+    cursor: pointer;
+  }
+  
+  @keyframes call {
+    from {
+      width: 50px;
+      height: 50px;
+    }
+    to {
+      width: 60px;
+      height: 60px;
+      rotate: -25deg;
+    }
+  }
+}
+
+.social {
+  position: fixed;
+  top: 20%;
+  right: 35px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: rgba(0, 0, 0, 0.6);
+  border: rgba(0, 0, 0, 0);
+  border-radius: 15px;
+  padding: 10px 10px 5px;
+  margin: 0;  
+  z-index: 100;
+  &__item:hover {
+    transform: scale(1.1);
+  }
+}
+

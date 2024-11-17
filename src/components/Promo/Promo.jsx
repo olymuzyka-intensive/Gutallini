@@ -1,4 +1,4 @@
-import Links from "../Links/Links";
+// import Links from "../Links/Links";
 // import { Send } from "../Send/Send";
 
 export const Promo = () => {
@@ -6,7 +6,7 @@ export const Promo = () => {
     <section className="promo">
       <div className="container">
         <div className="promo__row">
-          <Links/>
+          {/* <Links/> */}
 
           <div className="promo__row-main">
             <div className="logo">

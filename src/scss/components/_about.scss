@@ -6,15 +6,19 @@
   &__row {
     display: flex;
     flex-direction: column;
-    padding: 85px 0;
+    padding: 85px 0 147px;
 
     &-content {
-      padding: 60px 0;
-      display: grid;
-      gap: 30px;
+      // padding: 60px 0;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 55px;
     }
     &-text {
-      max-width: 450px;
+      // max-width: 450px;
+      max-width:45%;
+
       background-color: white;
       border-radius: 25px;
       padding: 15px;
@@ -22,12 +26,12 @@
       justify-self: start;
       font-size: 1.125rem;
     }
-    &-text:nth-child(2n) {
-      justify-self: end;
-    } 
-    img { 
-      width: 200px; 
-      height: 100%; 
-    } 
+    // &-text:nth-child(2n) {
+    //   justify-self: end;
+    // } 
+    // img { 
+    //   width: 200px; 
+    //   height: 100%; 
+    // } 
   } 
 } 
