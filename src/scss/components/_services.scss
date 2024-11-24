@@ -12,7 +12,7 @@
     flex-direction: column;
     position: relative;
     &--page {
-      padding: 15px 0 55px;
+      padding: 85px 0 130px;
     }
 
     &-section {
@@ -166,6 +166,16 @@
       display: grid;
       grid-template-columns: 1fr 1.5fr;
       gap: 25px;
+      padding-bottom: 25px;
     }
   }
+}
+
+
+.stages__service, .questions__service {
+  padding: 85px 0;
+}
+
+.questions {
+  background: $light-gray;
 }

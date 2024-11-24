@@ -13,11 +13,10 @@ import { Footer } from "./components/Footer/Footer";
 
 function App() {
   return (
-    <Router>
-      <ScrollToTop />
-
+    <Router>      
       <Header />
-      
+      <ScrollToTop/>
+
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/service/:id" element={<ServicePage />} />

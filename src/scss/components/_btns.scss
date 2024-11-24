@@ -72,3 +72,17 @@
     }  
   }  
 }  
+
+.page__nav {
+  display: flex;
+  gap: 50px;
+  justify-content: center;
+  &-item a {
+    background: $minor;
+    color: $white;
+    padding: 8px 16px;
+    border-radius: 10px;
+    font-size: 0.8rem;
+  }
+
+}

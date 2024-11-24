@@ -5,7 +5,7 @@
   src: url('../fonts/Gallinari-ExtraboldCond.otf');
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Oi&family=Prata&family=Ubuntu+Condensed&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Oi&family=Prata&family=Ubuntu+Condensed&display=swap');
 
 * {
   margin: 0;
@@ -16,6 +16,12 @@
 html {
   scroll-behavior: smooth;
 }
+
+// @-moz-document url-prefix() {
+//   html {
+//     scroll-behavior: smooth;
+//   }
+// }
 
 body {
   font-family: Oswald, sans-serif;
