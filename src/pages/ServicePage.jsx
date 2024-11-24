@@ -9,7 +9,7 @@ import { useParams } from "react-router-dom";
 import { TelegramFormRequest } from "../components/TelegramForm/TelegramFormRequest";
 // import Links from "../components/Links/Links";
 
-// import ScrollToTop from "../components/ScrollToTop";
+import ScrollToTop from "../components/ScrollToTop";
 
 function ServicePage() {
   const { id } = useParams();
@@ -33,7 +33,7 @@ function ServicePage() {
 
   return (
     <>
-      {/* <ScrollToTop/> */}
+      <ScrollToTop />
 
       <section className="promo">
         <div className="container">

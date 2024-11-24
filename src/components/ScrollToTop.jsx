@@ -7,8 +7,9 @@ const ScrollToTop = ({ children }) => {
     window.scrollTo({
       top: 0,
       behavior: 'smooth'
-    }, [pathname]);
-  });
+    });
+  }, [pathname]);
+ 
 
   // return null;
   return children;
