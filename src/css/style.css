@@ -13,6 +13,11 @@ html {
   scroll-behavior: smooth;
 }
 
+@-moz-document url-prefix() {
+  html {
+    scroll-behavior: smooth;
+  }
+}
 body {
   font-family: Oswald, sans-serif;
   font-weight: 400;
@@ -772,7 +777,7 @@ iframe {
 }
 .services__row-img {
   border-radius: 10px;
-  max-height: 263px;
+  max-height: 240px;
 }
 .services__row-img--preview {
   width: 50%;

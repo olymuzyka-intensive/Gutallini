@@ -17,11 +17,11 @@ html {
   scroll-behavior: smooth;
 }
 
-// @-moz-document url-prefix() {
-//   html {
-//     scroll-behavior: smooth;
-//   }
-// }
+@-moz-document url-prefix() {
+  html {
+    scroll-behavior: smooth;
+  }
+}
 
 body {
   font-family: Oswald, sans-serif;
