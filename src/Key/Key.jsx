@@ -5,7 +5,7 @@ export const Key = () => {
       <div className="container">
         <div className="key__row">
             <div className="key__row-img">
-                <img src="/public/img/key2.JPG" alt="key" />
+                <img src="/img/key2.JPG" alt="key" />
             </div>
             <div className="key__row-impotant">
                 <div className="key__row-title">

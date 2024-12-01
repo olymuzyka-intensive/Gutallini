@@ -5,7 +5,7 @@ export const Advantages = () => {
         <h2 className="advantages__title">Преимущества Gutallini</h2>
         <div className="advantages__row">
           <div className="advantages__row-img">
-            <img src="/public/img/advantages.jpg" alt="img" />
+            <img src="/img/advantages.jpg" alt="img" />
           </div>
           <ol className="advantages__row-content">
             <li className="advantages__row-text">
