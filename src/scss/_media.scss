@@ -118,9 +118,9 @@
     gap: 25px;
   }
 
-  .about__row-content {
-    gap: 25px;
-  }
+  // .about__row-content {
+  //   gap: 25px;
+  // }
 
   .feedback {
     margin: 15px 0;
@@ -159,12 +159,6 @@
   }
 }
 
-// @media (max-width: 960px) {
-//   body {
-//     font-size: 14px;
-//   }
-// }
-
 @media (max-width: 960px) {
   body {
     font-size: 14px;
@@ -174,8 +168,7 @@
     max-width: 80%;
   }
 
-  .btn {
-    // width: 200px;
+  .btn:not(.btn--switch) {
     padding: 10px 20px;
   }
 
@@ -205,11 +198,11 @@
     }
   }
 
-  .social {
-    flex-direction: row;
-    top: 9%;
-    right: 100px;
-  }
+  // .social {
+  //   flex-direction: row;
+  //   top: 9%;
+  //   right: 100px;
+  // }
 
   .send {
     padding: 15px 0;
@@ -221,23 +214,23 @@
     }
   }
 
-  .about__row {
-    padding: 75px 0;
-  }
+  // .about__row {
+  //   padding: 75px 0;
+  // }
 
-  .about__row-content {
-    display: grid;
-    gap: 10px;
-  }
-  .about__row-text {
-    max-width: 80%;
-    font-size: inherit;
-    padding: 8px 15px;
-  }
+  // .about__row-content {
+  //   display: grid;
+  //   gap: 10px;
+  // }
+  // .about__row-text {
+  //   max-width: 80%;
+  //   font-size: inherit;
+  //   padding: 8px 15px;
+  // }
 
-  .about__row-text:nth-child(2n) {
-    justify-self: end;
-  }
+  // .about__row-text:nth-child(2n) {
+  //   justify-self: end;
+  // }
 
   .how__row {
     padding: 75px 0;

@@ -13,6 +13,10 @@
       flex-direction: column;
       padding: 87px 0;
 
+      &--service {
+         padding: 75px 0;
+      }
+
       &-main {
          display: flex;
          flex-direction: row;
@@ -23,10 +27,11 @@
 
       &-title {
          &--service {
-            font-size: 3rem;//48-65px;
+            font-size: 3.5rem;//48-65px;
             width: 70%;
             text-align: center;
             color: $white; 
+            text-shadow: 2px 2px 5px $minor
          }      
       }
 
@@ -55,6 +60,9 @@
          display: flex;
          flex-direction: column;
          gap: 25px;
+         background-color: rgba(0, 0, 0, 0.5);
+         padding: 30px;
+         border-radius: 15px;
          &--tern, &--price {
             display: flex;
             flex-direction: row;
@@ -78,4 +86,10 @@
       width: 250px;
    }
 
+}
+
+.promo__service {
+   background: url('/public/img/top-bg3.jpg') center no-repeat;
+
+   background-size: 100% 100%
 }

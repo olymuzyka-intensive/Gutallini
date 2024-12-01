@@ -15,10 +15,10 @@ export const Header = () => {
     setIsActive(false)
   }
     return (
-        <header className="header">
+        <header className="header" id="header">
         <div className="container">
           <div className="header__row">
-            <div className="header__logo"><Link to="/"><img src="/img/favicon.png" alt="logo" /></Link></div>
+            <div className="header__logo"><Link to="/#promo"><img src="/img/favicon.png" alt="logo" /></Link></div>
 
             <nav>
               <ul className={`header__nav ${isActive ? "open" : ""}`}>

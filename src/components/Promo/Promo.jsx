@@ -3,7 +3,7 @@
 
 export const Promo = () => {
   return (
-    <section className="promo">
+    <section className="promo" id="promo">
       <div className="container">
         <div className="promo__row">
           {/* <Links/> */}

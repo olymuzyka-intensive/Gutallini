@@ -17,7 +17,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 380px;
+  width: 450px; //380
   // margin: 0 auto;
   padding: 20px;
   padding-bottom: 40px;
@@ -80,6 +80,8 @@
   textarea {
     border: 0.2px solid $minor;
     border-radius: 8px;
+    font-size: 1rem;
+
   }
 
   select {
@@ -90,7 +92,7 @@
   }
 
   textarea {
-    max-width: 340px;
+    max-width: 100%; //340
     // min-height: 100px;
     // margin-bottom: 10px;
     padding: 10px;
@@ -100,6 +102,7 @@
 
   &__close {
     position: absolute;
+    top: 15px;
     right: 20px;
     // color: $minor;
     width: 24px;
@@ -127,14 +130,16 @@
 }
 
 .form__request {
-  display: flex;
-  flex-direction: row;
+  // display: flex;
+  // flex-direction: row;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   z-index: 1000;
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 700px;
+  width: 800px;
   gap: 40px;
   padding: 20px;
   padding-bottom: 40px;
@@ -168,7 +173,8 @@
     padding: 10px;
     margin: 10px 0;
     font-family: Oswald, sans-serif;
-    width: 310px;
+    // width: 310px;
+    width: 100%;
   }
 
   &__upload input[type="file"] {
@@ -197,12 +203,15 @@
   textarea {
     border: 0.2px solid $minor;
     border-radius: 8px;
+    font-size: 1rem;
+
   }
 
   input[type="date"] {
     width: 100%;
     border: 0.2px solid $minor;
     border-radius: 8px;
+    font-size: 1rem;
   }
 
   input[type="time"] {
@@ -216,11 +225,14 @@
     margin: 10px 0;
     outline: none;
     font-family: Oswald, sans-serif;
-    width: 310px;
+    // width: 310px;
+    width: 100%;
   }
 
   textarea {
-    width: 310px;
+    // max-width: 100%;
+
+    width: 100%;
     // min-height: 100px;
     // margin-bottom: 10px;
     padding: 10px;
@@ -229,18 +241,19 @@
     font-family: inherit;
   }
 
-  &__close {
-    position: absolute;
-    right: 20px;
-    // color: $minor;
-    width: 24px;
-    height: 24px;
-    cursor: pointer;
-    svg path {
-      stroke: $minor;
-      fill: none;
-    }
-  }
+  // &__close {
+  //   position: absolute;
+  //   top: 20px;
+  //   right: 20px;
+  //   // color: $minor;
+  //   width: 24px;
+  //   height: 24px;
+  //   cursor: pointer;
+  //   svg path {
+  //     stroke: $minor;
+  //     fill: none;
+  //   }
+  // }
 
   &__communicate {
     display: flex;

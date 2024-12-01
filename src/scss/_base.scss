@@ -33,7 +33,41 @@ body {
 }
 
 ul {
-  list-style: none;
+  list-style-type: none; 
+}
+
+ol {
+  list-style-type: none; 
+	counter-reset: num;
+	margin: 0 0 0 45px;
+	// padding: 15px 0 5px 0;
+	font-size: 1rem;
+}
+
+ol li {
+	position: relative;	
+	margin: 0 0 0 0;
+	padding: 10px 0;
+	line-height: 1.4;
+}
+
+ol li::before {
+	content: counter(num); 
+	counter-increment: num;
+	display: flex;
+  justify-content: center;
+    align-items: center;
+	position: absolute;
+	top: 20px;
+	left: -40px;
+	width: 40px;
+	height: 40px;
+	background: $major;
+	color: #fff;
+	text-align: center;
+	line-height: 28px;
+	font-size: 1.25rem;
+  border-radius: 5px;
 }
 
 a {
@@ -61,6 +95,7 @@ h1 {
   width: 70%;
   text-align: center;
   color: $white;  
+  text-shadow: 2px 2px 5px $minor
 }
 
 h2 {

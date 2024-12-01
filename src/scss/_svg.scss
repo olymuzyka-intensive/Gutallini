@@ -31,3 +31,9 @@
     fill: $major;
   } 
 } 
+
+.services__row-type--desc svg {
+  path {
+    fill: $minor;
+  }
+}
