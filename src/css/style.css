@@ -1082,7 +1082,8 @@ iframe {
 
 @media (min-width: 1601px) {
   .container {
-    width: 1660px;
+    max-width: 1660px;
+    width: 90%;
   }
   html {
     font-size: 19px;
