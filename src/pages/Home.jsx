@@ -8,6 +8,7 @@ import { Services } from '../components/Serviсes/Services'
 import { How } from '../components/How/How'
 import { Advantages } from '../components/Advantages/Advantages';
 import ScrollToTop from '../components/ScrollToTop';
+import { Key } from '../Key/Key';
 
 function Home() {
   const { hash } = useLocation();
@@ -23,7 +24,7 @@ function Home() {
 
   return (
     <>    
-    <ScrollToTop >
+    <ScrollToTop />
 
     <Promo />
     <Send isActive={false}/>
@@ -33,8 +34,9 @@ function Home() {
     <How />
 
     <Services />
+    <Key />
     <Send isActive={false}/>
-    </ScrollToTop>
+    {/* </ScrollToTop> */}
     </>
   )
 }

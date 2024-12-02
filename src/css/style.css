@@ -178,7 +178,7 @@ h3 {
   border-radius: 10px;
   background: none;
   position: absolute;
-  right: -75px;
+  right: -60px;
   top: 8px;
   cursor: pointer;
 }
@@ -464,6 +464,7 @@ h3 {
   right: 0;
   bottom: 0;
   background-size: cover;
+  height: 100%;
 }
 
 .how {
@@ -1172,6 +1173,9 @@ iframe {
     padding: 52px 0;
   }
   .send__row {
+    gap: 25px;
+  }
+  .about__row-content {
     gap: 25px;
   }
   .feedback {
