@@ -1,6 +1,8 @@
 .how::before {
   content: "";
-  background: url("/img/top-bg3.jpg") center no-repeat;
+  // background: url("/img/top-bg3.jpg") center no-repeat;
+  // background: url("/img/promo-bg.jpg") center no-repeat;
+  background: $light-gray;
   opacity: 0.8;
   z-index: -1;
   position: absolute;
@@ -12,16 +14,17 @@
   // height: 100vh;
   height: 100%;
 }
+
 .how {
-  margin-top: 100px;
   position: relative;
+  // height: 100vh;
   &__row {
-    padding: 85px 0;
-    z-index: 1;
-    &-title {
-      color: $white;
-      text-shadow: 2px 2px 5px $main;
-    }
+    padding: 85px 0 10px;
+    // z-index: 1;
+    // &-title {
+    //   color: $white;
+    //   text-shadow: 2px 2px 5px $main;
+    // }
     &-items {
       display: flex;
       gap: 40px;
@@ -30,9 +33,9 @@
     &-free {
       width: 80px;
       position: absolute;
-      top: -10px;
-      right: 0px;
-      rotate: 10deg;
+      top: -20px;
+      right: 5px;
+      rotate: 25deg;
     }
 
     &-info {
@@ -68,6 +71,61 @@
           color: $major;
         }
       }
+    }
+  }
+}
+
+.feedback {
+  margin: 40px 0;
+  display: flex;
+  gap: 50px;
+  justify-content: center;
+}
+
+.visit {
+  &__personal {
+    display: flex;
+    gap: 50px;
+    position: relative;
+  }
+
+  &__row {
+    padding: 25px 0 150px;
+
+    &-info {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      width: 50%;
+      gap: 20px;
+    }
+
+    &-item {
+      border: 1px solid $minor;
+      border-radius: 5px;
+      padding: 15px;
+      max-width: 33%;
+      position: relative;
+      background: $white;
+
+      &_title {
+        font-size: 1.625rem; //26px;
+        margin-bottom: 20px;
+        font-weight: 600;
+        display: flex;
+        gap: 20px;
+        span {
+          width: 25px;
+        }
+      }
+
+      &_text {
+        font-size: 1.125rem;
+        span {
+          color: $major;
+        }
+      }
+
       &--services {
         width: 65%;
         border: 1px solid $minor;
@@ -75,6 +133,7 @@
         padding: 15px;
         background: $white;
       }
+
       &--address {
         flex-grow: 1;
         border: 1px solid $minor;
@@ -89,23 +148,10 @@
   }
 }
 
-.feedback {
-  margin: 40px 0;
-  display: flex;
-  gap: 50px;
-  justify-content: center;
-}
-
-.visit {
-  display: flex;
-  gap: 50px;
-  // align-items: flex-start;
-  position: relative;
-}
-
 iframe {
   border-radius: 5px;
   border: 1px solid $minor;
   position: absolute;
+  height: 250px;
   // top: 30px;
 }

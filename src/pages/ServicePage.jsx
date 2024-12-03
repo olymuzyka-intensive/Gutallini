@@ -11,7 +11,7 @@ import { TelegramFormRequest } from "../components/TelegramForm/TelegramFormRequ
 
 import ScrollToTop from "../components/ScrollToTop";
 import { Advantages } from "../components/Advantages/Advantages";
-import { Key } from "../Key/Key";
+import { Key } from "../components/Key/Key";
 
 function ServicePage() {
   const { id } = useParams();
@@ -219,8 +219,6 @@ function ServicePage() {
         </div>
       </section>
 
-      <Key/>
-
       <section className="stages" id="stages">
         <div className="container">
           <div className="stages__service">
@@ -253,6 +251,8 @@ function ServicePage() {
           </div>
         </div>
       </section>
+
+      <Key />
 
       <section className="questions" id="questions">
         <div className="container">

@@ -4,7 +4,6 @@
   font-family: 'Gallinari';
   src: url('../fonts/Gallinari-ExtraboldCond.otf');
 }
-
 // @import url('https://fonts.googleapis.com/css2?family=Oi&family=Prata&family=Ubuntu+Condensed&display=swap');
 
 * {
@@ -39,7 +38,7 @@ ul {
 ol {
   list-style-type: none; 
 	counter-reset: num;
-	margin: 0 0 0 45px;
+	// margin: 0 0 0 45px;
 	// padding: 15px 0 5px 0;
 	font-size: 1rem;
 }
@@ -74,15 +73,18 @@ a {
   text-decoration: none;
   font-size: 1.25rem;
   color: $main;
+  outline: none;
 }
 
 .container {
-  width: 1160px;
+  max-width: 1280px; 
+  width: 90%;
+  // width: 1160px;
   margin: 0 auto;
 }
+
 .container .header__nav  {
   position: relative;
-
 }
 
 h1 {

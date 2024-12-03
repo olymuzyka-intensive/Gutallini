@@ -1,10 +1,17 @@
+#before-after {
+  background: $light-gray;
+}
+
 .services {
+  background: $light-gray;
+margin-top: 100px;
   &__row {
-    margin-top: 100px;
-    padding: 75px 0;
+    
+    padding: 85px 0;
     display: flex;
     flex-direction: column;
     position: relative;
+ 
     &--page {
       padding: 85px 0 130px;
     }
@@ -53,7 +60,9 @@
       &--desc {
         text-transform: uppercase;
         font-weight: 900;
-        margin: 20px 0 10px;
+        // margin: 20px 0 10px;
+        margin: 0 0 30px;
+
         span {
           margin-right: 20px;
         }
@@ -165,11 +174,13 @@
   }
 }
 
+.impotant {
+  display: flex;
+  min-height: 170px; 
+  justify-content: center;
+  align-items: center; 
+}
 
 .stages__service, .questions__service {
   padding: 85px 0;
-}
-
-.questions {
-  background: $light-gray;
 }

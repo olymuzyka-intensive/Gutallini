@@ -24,8 +24,8 @@ export const Header = () => {
               <ul className={`header__nav ${isActive ? "open" : ""}`}>
 
                 <li className="header__nav-item"><Link to="/#about" onClick={closeMenu}>О нас</Link></li>
-                <li className="header__nav-item"><Link to="/#contacts" onClick={closeMenu}>Контакты</Link></li>
-                <li className="header__nav-item"><Link to="/#services" onClick={closeMenu}>Услуги</Link></li>
+                <li className="header__nav-item"><Link to="/#contacts" onClick={closeMenu}>Как мы работаем</Link></li>
+                <li className="header__nav-item"><Link to="/#services" onClick={closeMenu}>Подробнее об услугах</Link></li>
                 <li className="header__nav-item">
                   <a href="https://franch.gutallini.ru/">Франшиза</a>
                 </li>

@@ -1,6 +1,8 @@
 .about::before {
   content: "";
-  background: url("/img/top-bg2.jpg") center no-repeat;
+  // background: url("/img/promo-bg.jpg") center no-repeat;
+  // background: url("/img/top-bg5.jpg") center no-repeat;
+
   opacity: 0.8;
   z-index: -1;
   position: absolute;
@@ -18,11 +20,12 @@
     flex-direction: column;
     z-index: 1;
     // padding: 85px 0 147px;
-    padding: 85px 0 30px;
-    &-title {
-      color: $white;
-      text-shadow: 2px 2px 5px $main;
-    }
+    padding: 45px 0;
+    // padding: 85px 0 30px;
+    // &-title {
+    //   color: $white;
+    //   text-shadow: 2px 2px 5px $main;
+    // }
     &-content {
       // padding: 60px 0;
       display: flex;
@@ -58,13 +61,17 @@
 .advantages {
   display: flex;
   flex-direction: row;
-  &__title {
-    margin-top: 30px;
-  }
+  
+  border-bottom: 1px solid $light-gray;
+  border-top: 1px solid $light-gray;
+  // &__title {
+  //   margin-top: 30px;
+  // }
   &__row {
+    margin: 75px 0;//50
     display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 50px;
+    grid-template-columns: 2fr 1fr;
+    gap: 25px;
     &-img {
       img {
         width: 100%;
@@ -76,13 +83,14 @@
       display: grid;
       // justify-content: center;
       grid-template-columns: 1fr 1fr;
-      flex-wrap: wrap;
+      // flex-wrap: wrap;
       // flex-direction: row;
       gap: 15px;
+      margin-left: 40px;
     }
 
     &-text {
-      max-width: 75%;
+      max-width: 85%;
 
       background-color: white;
       border-radius: 5px;
@@ -105,15 +113,15 @@
 
 .key {
   background: $light-gray;
-  padding: 50px 0;
-  &__row {
+  &__row {  
+    padding: 100px 0;
     display: grid;
     grid-template-columns: 1fr 2fr;
     gap: 50px;
     &-img {
       img {
         // width: 100%;
-        height: 80vh;
+        height: 85vh;
         border-radius: 5px;
       }
     }
@@ -127,11 +135,38 @@
     }
 
     &-title {
-      font-size: 3.5rem;
+      font-size: 2.5rem;
+      text-transform: uppercase;
+      font-weight: 600;
     }
 
     &-text {
-      font-size: 1.5rem;
+      font-size: 1.625rem;
+    }
+
+    &-list {
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+      justify-content: space-between;
+      margin-top: 25px;
+      padding-right: 25px;
+    } 
+
+    &-items { 
+      display: flex; 
+      flex-direction: column;
+      gap: 10px;
+
+      &--title {
+        font-size: 1.125rem;
+        margin-bottom: 20px;
+        font-weight: 600;
+        // text-transform: uppercase;
+      }
+    }
+    &-item {
+      font-size: 1.125rem;
     }
   }
 }
