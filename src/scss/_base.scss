@@ -14,6 +14,14 @@
 
 html {
   scroll-behavior: smooth;
+  // font-size: 18px;
+  font-family: Oswald, sans-serif;
+  // font-family: Finlandica, sans-serif;
+  // font-family: 'Mulish', Arial, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: $main;
+
 }
 
 @-moz-document url-prefix() {
@@ -22,14 +30,14 @@ html {
   }
 }
 
-body {
-  font-family: Oswald, sans-serif;
-  // font-family: Finlandica, sans-serif;
-  // font-family: 'Mulish', Arial, sans-serif;
-  font-weight: 400;
-  font-size: 18px;
-  color: $main;
-}
+// body {
+//   font-family: Oswald, sans-serif;
+//   // font-family: Finlandica, sans-serif;
+//   // font-family: 'Mulish', Arial, sans-serif;
+//   font-weight: 400;
+//   font-size: 18px;
+//   color: $main;
+// }
 
 ul {
   list-style-type: none; 

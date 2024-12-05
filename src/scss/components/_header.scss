@@ -2,6 +2,7 @@
   background-color: #000000e6; //0.5
   width: 100%;
   position: sticky;
+  // position: fixed;
   top: 0;
   z-index: 100;
   &__row {
@@ -53,7 +54,7 @@
       border-radius: 10px;
       background: none;
       position: absolute;
-      right: -60px;
+      right: -50px;
       top: 8px;
       cursor: pointer;
       span {

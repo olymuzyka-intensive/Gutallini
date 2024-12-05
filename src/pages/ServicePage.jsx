@@ -208,13 +208,13 @@ function ServicePage() {
                 />
               </div>
             </div>
-            {/* <section className="impotant">
+            <section className="impotant impotant__bottom">
               <div className="container">
                 <div className="services__row-promo">
                   {selectedObject.about2}
                 </div>
               </div>
-            </section> */}
+            </section>
           </div>
         </div>
       </section>
@@ -252,7 +252,9 @@ function ServicePage() {
         </div>
       </section>
 
-      <Key />
+
+      <Send isActive={false} />
+
 
       <section className="questions" id="questions">
         <div className="container">
@@ -336,8 +338,20 @@ function ServicePage() {
             ))}
           </div>
         </div>
-      </section>
-      <Send isActive={false} />
+      </section>      
+
+      <ul className="feedback">
+            <a href="tel:+375445090525">
+              <div className="btn btn--send">Позвонить</div>
+            </a>
+            <div className="btn btn--submit" onClick={openModal}>
+              Оставить заявку
+            </div>
+            <TelegramFormRequest isOpen={showModal} onClose={closeModal} />
+          </ul>
+
+            <Key />
+
     </>
   );
 }

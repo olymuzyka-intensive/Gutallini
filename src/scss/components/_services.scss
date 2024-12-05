@@ -4,7 +4,9 @@
 
 .services {
   background: $light-gray;
-margin-top: 100px;
+// margin-top: 100px;
+border-top: 1px solid red;
+
   &__row {
     
     padding: 85px 0;
@@ -13,20 +15,26 @@ margin-top: 100px;
     position: relative;
  
     &--page {
-      padding: 85px 0 130px;
+      padding: 85px 0 150px;
     }
 
     &-section {
-      // margin: 10px 0;
+      margin: 10px 0;
       display: grid;
-      gap: 35px 20px;
+      gap: 35px; //35px 20px
       grid-template-columns: repeat(3, 1fr);
     }
+
+    // &-section > * {
+    //   flex: 1;
+    // }
 
     &-img {
       // width: 100%;
       border-radius: 10px;
       max-height: 240px; //263
+      object-fit: fill;
+
       &--preview {
         width: 50%;
       }
@@ -179,6 +187,10 @@ margin-top: 100px;
   min-height: 170px; 
   justify-content: center;
   align-items: center; 
+}
+
+.impotant__bottom {
+  min-height: 100px;
 }
 
 .stages__service, .questions__service {
