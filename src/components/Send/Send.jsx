@@ -11,7 +11,7 @@ export const Send = ({ isActive }) => {
     setShowModal(false);
   };
   return (
-    <section className="send">
+    <section className="send" id="send">
       <div className="container">
         <div className={isActive ? "send__row--promo" : "send__row"}>
         <svg className="send__row-icon" xmlns="http://www.w3.org/2000/svg" width="100px"

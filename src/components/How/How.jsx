@@ -42,7 +42,7 @@ export const How = () => {
                 </g>
               </svg>
              
-              Заберем и доставим без оплаты
+              Заберем и доставим по Гомелю без оплаты
             </h3>
           </div>
           <ul className="how__row-items">

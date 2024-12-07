@@ -11,10 +11,6 @@
     color: $white;
     background-color: $minor;
     &:hover {
-      // background: transparent;
-      // border-color: gray;
-      // font-weight: 800;
-      // color: #d78707;
       -webkit-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
       -moz-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
       box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
@@ -42,7 +38,6 @@
 
   &--send-promo {
     color: $white;
-    // font-weight: 700;
     background-color: $major;
     &:hover {
       -webkit-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
@@ -52,7 +47,6 @@
   }
 
   &--more {
-    // padding: 0 5px 5px;
     padding: 0 5px;
     width: auto;
   }
@@ -61,7 +55,6 @@
     padding: 4px;
     font-size: 0;
     // padding: 4px 8px 8px 8px;
-    // font-weight: 500;
     width: 30px;
     height: 30px;
     color: $white;
@@ -70,6 +63,14 @@
     background-color: transparent;
     svg path {
       fill: $minor;
+    }
+  }
+  &__top {
+    position: absolute;
+    bottom: 0;
+    right: 30px;
+    svg path {
+      fill: $major;
     }
   }
 }
@@ -83,21 +84,16 @@
 //   top: 30%;
 //   left: 15px;
 //   z-index: 99;
-  
-//   // background-color: rgba(0, 0, 0, 0.5);
-//   // padding: 15px;
-//   // border-radius: 15px;
+
 //   svg path {
 //     fill: $major;
-//   }   
+//   }
 //   &-item a {
-//     // background: $minor;
-//     // color: $white;
-//     // padding: 8px 16px;
-//     // border-radius: 10px;
-//     // font-size: 0.8rem;
 //     width: 50px;
 //     height: 50px;
-  
 //   }
 // }
+
+.top {
+  position: relative;
+}
