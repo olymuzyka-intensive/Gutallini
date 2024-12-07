@@ -59,17 +59,8 @@ function ServicePage() {
             </div>
 
             <Send isActive={true} />
-            <ul className="page__nav">
-              {/* <li className="page__nav-item">
-                <a href="#before-after">До/После</a>
-              </li>
-              <li className="page__nav-item">
-                <a href="#stages">Этапы работы</a>
-              </li>
-              <li className="page__nav-item">
-                <a href="#questions">Вопросы</a>
-              </li> */}
-              <li className="page__nav-item">
+            {/* <ul className="page__nav">
+               <li className="page__nav-item">
                 <a href="#before-after">
                   <svg
                     width="32"
@@ -149,7 +140,7 @@ function ServicePage() {
                   </svg>
                 </a>
               </li>
-            </ul>
+            </ul> */}
           </div>
         </div>
       </section>
@@ -161,8 +152,6 @@ function ServicePage() {
           </div>
         </div>
       </section>
-
-      <Advantages />
 
       <section className="services" id="before-after">
         <div className="container">
@@ -218,6 +207,8 @@ function ServicePage() {
           </div>
         </div>
       </section>
+
+      <Advantages />
 
       <section className="stages" id="stages">
         <div className="container">
@@ -351,7 +342,6 @@ function ServicePage() {
           </ul>
 
             <Key />
-
     </>
   );
 }

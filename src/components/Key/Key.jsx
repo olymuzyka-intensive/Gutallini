@@ -23,18 +23,15 @@ export const Key = () => {
                 </ul>
                 <ul className="key__row-items">
                   <h4 className="key__row-items--title">Реставрация</h4>
-                  <li className="key__row-item">
-                    Устранение потертостей и царапин
-                  </li>
                   <li className="key__row-item">Восстановление цвета</li>
-                  <li className="key__row-item">Перекрашивание</li>
+                  <li className="key__row-item">Покраска подошвы</li>
                   <li className="key__row-item">Ремонт повреждений</li>
+                  <li className="key__row-item">Восстановление сумок</li>
                 </ul>
                 <ul className="key__row-items">
                   <h4 className="key__row-items--title">Дополнительные услуги</h4>
                   <li className="key__row-item">Выведение реагентов</li>
-                  <li className="key__row-item">Покраска подошвы</li>
-                  <li className="key__row-item">Восстановление сумок</li>
+                  <li className="key__row-item">Перекрашивание</li>
                   <li className="key__row-item">Патинирование</li>
                 </ul>
               </ul>

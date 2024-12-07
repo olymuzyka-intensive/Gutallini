@@ -17,8 +17,28 @@
         width: 300px;
       }
     }
-    &-title, &-text {
-        color: $white;
+    &-title,
+    &-text {
+      color: $white;
     }
+  }
+  &__nav {
+    position: relative;
+    &-item {
+      position: absolute;
+      // right: 0;
+      bottom: 100px;
+
+    }
+    &-item {
+      svg path {
+        fill: $major;
+      }
+    }
+    // &-item a svg {
+    //   width: 60px;
+    //   height: 60px;
+
+    // }
   }
 }
