@@ -30,14 +30,12 @@ html {
   }
 }
 
-// body {
-//   font-family: Oswald, sans-serif;
-//   // font-family: Finlandica, sans-serif;
-//   // font-family: 'Mulish', Arial, sans-serif;
-//   font-weight: 400;
-//   font-size: 18px;
-//   color: $main;
-// }
+.container {
+  max-width: 1280px;
+  width: 95%;
+  margin: 0 auto;
+}
+
 
 ul {
   list-style-type: none; 
@@ -82,13 +80,6 @@ a {
   font-size: 1.25rem;
   color: $main;
   outline: none;
-}
-
-.container {
-  max-width: 1280px; 
-  width: 90%;
-  // width: 1160px;
-  margin: 0 auto;
 }
 
 .container .header__nav  {

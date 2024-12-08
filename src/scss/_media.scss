@@ -45,13 +45,9 @@
     padding: 25px 0;
   }
 
-  // .visit__row-item--address {
-  //   top: 50%;
-  // }
-
-  // .services__row--page {
-  //   padding: 85px 0 120px;
-  // }
+  .services__card {
+    width: 350px;
+  }
 }
 
 @media (max-width: 1024px) {
@@ -65,7 +61,7 @@
 
   h2 {
     font-size: 2rem;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
   }
 
   h3 {
@@ -151,12 +147,8 @@
 }
 
 @media (max-width: 960px) {
-  html {
-    font-size: 14px;
-  }
-
   .container {
-    max-width: 80%;
+    max-width: 85%;
   }
 
   h1 {
@@ -285,7 +277,11 @@
 
 @media (max-width: 720px) {
   html {
-    font-size: 10px;
+    font-size: 12px;
+  }
+
+  .container {
+    max-width: 80%;
   }
 
   // h1 {
