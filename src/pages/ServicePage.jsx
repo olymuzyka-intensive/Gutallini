@@ -59,7 +59,7 @@ function ServicePage() {
             </div>
 
             <Send isActive={true} />
-            {/* <ul className="page__nav">
+            <ul className="page__nav">
                <li className="page__nav-item">
                 <a href="#before-after">
                   <svg
@@ -140,7 +140,7 @@ function ServicePage() {
                   </svg>
                 </a>
               </li>
-            </ul> */}
+            </ul>
           </div>
         </div>
       </section>
@@ -160,7 +160,7 @@ function ServicePage() {
             className="services__row--page"
             data-info={selectedObject.id}
           >
-            <h3 className="services__row-type--desc">
+            <h2 className="services__row-type--desc">
               <span>
                 <svg
                   width="32"
@@ -176,7 +176,7 @@ function ServicePage() {
                 </svg>
               </span>
               До/после
-            </h3>
+            </h2>
 
             <div className="services__row-bottom">
               <div className="services__row-content">
@@ -213,7 +213,7 @@ function ServicePage() {
       <section className="stages" id="stages">
         <div className="container">
           <div className="stages__service">
-            <h3 className="services__row-type--desc">
+            <h2 className="services__row-type--desc">
               <span>
                 <svg
                   width="32"
@@ -229,7 +229,7 @@ function ServicePage() {
                 </svg>
               </span>
               Этапы работы
-            </h3>
+            </h2>
 
             <ul className="services__row-stages">
               {selectedObject.stages.map((item) => (
@@ -253,10 +253,13 @@ function ServicePage() {
         <TelegramFormRequest isOpen={showModal} onClose={closeModal} />
       </ul>
 
+      {/* <Key /> */}
+      {/* <Advantages /> */}
+
       <section className="questions" id="questions">
         <div className="container">
           <div className="questions__service">
-            <h3 className="services__row-type--desc">
+            <h2 className="services__row-type--desc">
               <span>
                 <svg
                   width="32"
@@ -279,7 +282,7 @@ function ServicePage() {
                 </svg>
               </span>
               Часто задаваемые вопросы
-            </h3>
+            </h2>
             {questions.map((item, index) => (
               <div key={item.id} className="services__row-question">
                 <div
@@ -339,7 +342,6 @@ function ServicePage() {
 
       <Send isActive={false} />
 
-      <Key />
       
       <div className="top">
         <div className="btn__top">

@@ -11,10 +11,10 @@
    &__row {
       display: flex;
       flex-direction: column;
-      padding: 90px 0;
+      padding: 120px 0;
 
       &--service {
-         padding: 60px 0;
+         padding: 90px 0;
       }
 
       &-main {
@@ -89,7 +89,7 @@
 }
 
 .promo__service {
-   background: url('/public/img/top-bg3.jpg') center no-repeat;
+   background: url('/img/top-bg3.jpg') center no-repeat;
 
    background-size: 100% 100%
 }
