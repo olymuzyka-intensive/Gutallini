@@ -1,5 +1,6 @@
 .send {
     padding: 25px 0; //20
+    border-bottom: 2px solid $light-gray;
     &__row {
         display: flex;
         align-items: center;

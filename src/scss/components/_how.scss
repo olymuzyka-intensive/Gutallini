@@ -30,6 +30,9 @@
       &-head {
         display: flex;
         justify-content: space-between;
+        svg {
+          position: relative;
+        }
       }
 
     &-subtitle {
@@ -101,7 +104,6 @@
   &__personal {
     display: flex;
     gap: 50px;
-    position: relative;
     justify-content: space-between;
   }
 
@@ -169,4 +171,32 @@ iframe {
   // position: absolute;
   height: 250px;
   // top: 30px;
+}
+
+.tip {
+  border: none;
+  width: 50px;
+  height: 50px;
+  position: relative;
+  cursor: pointer; 
+}
+
+.tip-hover {
+  padding: 15px;
+  background: white;
+  font-size: 1.25rem;
+  color: $main;
+  box-shadow: 0px 2px 8px rgba(20, 16, 36, 0.1);
+  border-radius: 10px;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s;
+  position: absolute;
+  right: 180px;
+  width: max-content;
+}
+
+.tip:hover + .tip-hover {
+  visibility: visible;
+  opacity: 1;
 }
