@@ -343,7 +343,7 @@ function ServicePage() {
       <Send isActive={false} />
 
       
-      <div className="top">
+      {/* <div className="top">
         <div className="btn__top">
           <a href="#top">
             <svg
@@ -369,7 +369,7 @@ function ServicePage() {
             </svg>
           </a>
         </div>
-      </div>
+      </div> */}
     </>
   );
 }
