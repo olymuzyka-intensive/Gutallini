@@ -76,7 +76,7 @@ export const TelegramForm = ({ isOpen, onClose }) => {
     setTimeout(() => {
       setTextMessage(false);
       onClose();
-    }, 5000);
+    }, 10000);
   };
 
   return (

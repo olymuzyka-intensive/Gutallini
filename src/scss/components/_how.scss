@@ -16,12 +16,13 @@
 }
 
 .how {
-  position: relative;
+  // position: relative;
   // border-top: 1px solid red;
 
   // height: 100vh;
   &__row {
     padding: 85px 0 10px;
+    position: relative;
     // z-index: 1;
     // &-title {
     //   color: $white;
@@ -177,7 +178,7 @@ iframe {
   border: none;
   width: 50px;
   height: 50px;
-  position: relative;
+  // position: relative;
   cursor: pointer; 
 }
 
@@ -192,7 +193,7 @@ iframe {
   opacity: 0;
   transition: opacity 0.3s;
   position: absolute;
-  right: 180px;
+  right: 100px;
   width: max-content;
 }
 

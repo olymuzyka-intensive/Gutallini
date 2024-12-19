@@ -19,7 +19,8 @@ export const Advantages = () => {
 
               <li className="advantages__row-text">
                 <div className="advantages__row-text--title">
-                  Индивидуальный подход
+                  {/* Индивидуальный подход */}
+                  Персонализация
                 </div>
                 Мы предлагаем индивидуальный подход к каждому клиенту и его
                 изделию.

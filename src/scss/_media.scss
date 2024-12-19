@@ -13,6 +13,7 @@
   .services__row--page {
     padding: 25px 0;
   }
+
   .page__nav {
     top: 50%;
   }
@@ -27,6 +28,7 @@
       padding: 55px 0 20px;
     }    
   }
+
   .about__row {
     padding: 20px 0;
   }
@@ -97,10 +99,6 @@
     padding: 35px 0;
   }
 
-  .tip-hover {
-    right: 400px;
-  }
-
   .visit__row {
     padding: 85px 0;
   }
@@ -131,6 +129,7 @@
   .container {
     max-width: 85%;
   }
+
   .promo__row {
     padding: 55px 0;
   }
@@ -273,20 +272,14 @@
 }
 
 @media (max-width: 960px) {
-  .container {
-    max-width: 85%;
+    .container {
+    max-width: 80%;
   }
-
-  // h1 {
-  //   font-size: 3.5rem;
-  //   line-height: 120%;
-  // }
 
   h2 {
     font-size: 2.3rem;
     margin-bottom: 15px;
   }
-
 
   .header__call {
     width: 40px;
@@ -424,47 +417,22 @@
   // }
 }
 
-@media (max-width: 720px) {
-  html {
-    font-size: 12px;
+@media (max-width: 800px) {
+  .page__nav-item:nth-child(1), .page__nav-item:nth-child(3) {
+    display: none;
   }
+}
 
-  // h2 {
-  //   margin-bottom: 10px;
-  // }
-
-  .header__nav-burger {
-    right: -30px;
-  }
-
+@media (max-width: 768px) {
   h1 {
     font-size: 3.5rem;
-  }
-
-  .header__call {
-    width: 35px;
-    height: 35px;
-  }
-
-  .social {
-    top: 25%;
-    right: 5px;
-    padding: 5px;
-  }
-  
-  .btn:not(.btn--switch) {
-    width: 160px;
-    padding: 15px 10px;
-  }
-
-  .tip-hover {
-    right: 130px;
   }
 
   .promo__row {
     padding: 50px 0;
     &-title--service {
-      font-size: 2.5rem;
+      font-size: 3rem;
+      margin-top: 30px;
       margin-bottom: 10px;
     }
     &-type {
@@ -480,8 +448,33 @@
     }
   }
 
-  .send__row--promo {
-    padding: 15px;
+  .how__row, .visit__row {
+    padding: 85px 0;
+  }
+
+  .services__row-section {
+    gap: 10px;
+    grid-template-columns: auto;
+  }
+
+  .send__row-appeal {
+    font-size: 1.25rem;
+  }
+
+  .btn:not(.btn--switch) {
+    // width: 220px;
+    padding: 15px 10px;
+  }
+
+  .key__row {
+    padding: 85px 0;
+    gap: 25px;
+    &-title {
+      font-size: 2rem;
+    }
+    &-img img {
+      width: 85%;
+    }
   }
 
   .key__row-impotant {
@@ -492,6 +485,7 @@
     gap: 10px;
     &--title {
     height: 20px;
+    font-size: 1rem;
     }
   }
 
@@ -501,6 +495,102 @@
 
   .key__row-list {
     margin-top: 5px;
+  }
+
+  .about__row-text--title {
+    min-height: 60px;
+  }
+
+  .advantages__row {
+    gap: 15px;
+    grid-template-columns: 3fr .8fr;
+  }
+
+  #before-after {
+    margin-top: -70px;
+  }
+
+  .services__row--page {
+    padding: 85px 0 30px;
+  }
+
+  .page__nav-item:nth-child(1), .page__nav-item:nth-child(3) {
+    display: none;
+  }
+
+  .form {
+    width: 60%;
+    padding-bottom: 20px;
+    input {
+      padding: 5px;
+      margin: 5px 0;
+    }
+    select {
+      margin: 5px 0;
+    }
+    textarea {
+      height: 50px;
+    }
+
+    .btn--send_foto {
+      padding: 10px ;
+    }
+
+    &__subtitle {
+      margin: 5px 0;
+    }
+
+    &__upload input[type="file"] {
+      margin-bottom: 10px;
+    }
+
+    &__message {
+      left: 40%;
+    }
+  }
+
+  .form__request {
+    width: 90%;
+  }
+}
+
+@media (max-width: 720px) {
+  html {
+    font-size: 12px;
+  }
+
+  .header__nav-burger {
+    right: -30px;
+  }
+
+  .header__call {
+    width: 35px;
+    height: 35px;
+  }
+
+  .social {
+    top: 25%;
+    right: 5px;
+    padding: 5px;
+  }
+  
+  .tip-hover {
+    right: 50px;
+  }
+
+  .promo__row {
+    &-title--service {
+      font-size: 2.5rem;
+      margin-top: 20px;
+    }
+  }
+
+  .visit__row {
+    padding: 45px 0;
+  }
+  
+  .send__row--promo {
+    padding: 15px;
   }
 
   .how__row-items {
@@ -516,10 +606,14 @@
     max-height: 125px;
   }
 
-  .services__row-section {
-    gap: 10px;
-    grid-template-columns: auto;
+  .impotant {
+    min-height: 110px;
   }
+
+  .services__row-promo {
+    font-size: 1.25rem;
+  }
+
 
   .services__card-type {
     min-height: auto;
@@ -527,5 +621,21 @@
 
   .services__row-question {
     margin: 15px 0;
+  }
+
+  .page__nav {
+    padding: 10px 1px;
+  }
+
+  .page__nav-item:nth-child(1), .page__nav-item:nth-child(3) {
+    display: block;
+  }
+
+  .advantages__row {
+    grid-template-columns: 2fr .7fr;
+  }
+
+  .questions__service {
+    padding: 85px 0;
   }
 }
