@@ -1,6 +1,4 @@
-# Проект в стадии разработки, еще нужно доводить до ума т.к.
-с дизайном и содержимым нескоторых модулей заказчик еще не определился
-## demo https://gutallini.vercel.app/ 
+# demo https://gutallini.vercel.app/ 
 
 # React + Vite
 
